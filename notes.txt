@@ -1,0 +1,29 @@
+TODO:::
+GLOBAL:
+  Black Border
+  Responsive Sizing
+  Top right side menu
+
+Consider::: 4 color scheme one dominant on each page with the others as accents. Relatively dark.
+What libraries already exist?
+
+MAIN PAGE:::
+  Hamming Distance Graphic. Generate it server-side and then export it to the browser. Display on a 45deg angle.
+  Generating graphics with javascript/typescript?
+  Size of graphic must vary in size based on the device it is being rendered on.
+  How to display ongoing generation of a graphic? 
+
+PROJECTS WEBPAGE :::
+  Banner-style Boxes that look good on a phone.
+  After building out 
+
+ABOUT PAGE :::
+  Pictures of me, hobbies, links to other pages, resume, linkedin etc.
+
+BLOG PAGE :::
+  How to set this up?
+  Should be able to display code nicely.
+  Should be able to login and update it myself.
+  Starting topics? Bend, Mojo? Something from current classes? Data Structures? Fibonacci Heaps?
+
+ 
