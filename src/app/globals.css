@@ -21,6 +21,11 @@ body {
   background: rgb(255, 255, 255);
 }
 
+.rotatedimage {
+  /* Does this work? */
+  transform: rotate(45deg) !important;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

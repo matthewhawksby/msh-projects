@@ -1,11 +1,17 @@
 TODO:::
 GLOBAL:
-  Black Border
+  Dark Grey 222 Border
   Responsive Sizing
   Top right side menu
 
 Consider::: 4 color scheme one dominant on each page with the others as accents. Relatively dark.
 What libraries already exist?
+Using MambaUI ATM...
+Also Preline, DaisyUI(UI Only use with headless), MambaUI, HyperUI, Meraki, Myna, Kutty, Kitwind, FloatUI, SailboatUI, TailGrids
+Headless version : HeadlessUI, Radix, Reakit, ReachUI, React Aria.
+FlowBite and Flowbite React.
+
+Try Headless UI.
 
 MAIN PAGE:::
   Hamming Distance Graphic. Generate it server-side and then export it to the browser. Display on a 45deg angle.
