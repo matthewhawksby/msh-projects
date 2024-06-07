@@ -10,6 +10,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        customGray: "#F2F1F5",
         tetraRed: "#b70802",
         tetraGreen: "#57B702",
         tetraBlue: "#02B1B7",

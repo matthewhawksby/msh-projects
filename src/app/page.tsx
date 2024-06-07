@@ -29,7 +29,7 @@ export default function Home() {
                 <li className="">
                   <a
                     href="#"
-                    className="block py-2 px-3 bg-white font-semibold hover:text-tetraRed"
+                    className="block py-2 px-3 bg-white font-semibold hover:text-tetraRed delay-150"
                   >
                     Projects
                   </a>
@@ -37,7 +37,7 @@ export default function Home() {
                 <li>
                   <a
                     href="#"
-                    className="block py-2 px-3 bg-white hover:text-blue-700 font-semibold hover:text-tetraBlue"
+                    className="block py-2 px-3 bg-white hover:text-blue-700 font-semibold hover:text-tetraBlue delay-150"
                   >
                     About
                   </a>
@@ -45,7 +45,7 @@ export default function Home() {
                 <li>
                   <a
                     href="#"
-                    className="block py-2 px-3 bg-white hover:text-blue-700 font-semibold hover:text-tetraGreen"
+                    className="block py-2 px-3 bg-white hover:text-blue-700 font-semibold hover:text-tetraGreen delay-150"
                   >
                     About
                   </a>
@@ -53,7 +53,7 @@ export default function Home() {
                 <li>
                   <a
                     href="#"
-                    className="block py-2 px-3 bg-white hover:text-blue-700 font-semibold hover:text-tetraPurple"
+                    className="block py-2 px-3 bg-white hover:text-blue-700 font-semibold hover:text-tetraPurple delay-150"
                   >
                     Fourth
                   </a>
@@ -71,7 +71,7 @@ export default function Home() {
 
                   */}
               <div
-                className="sans font-dm-sans inline-flex items-center overflow-hidden border-gray-300 bg-black 
+                className="sans font-dm-sans inline-flex items-center overflow-hidden border-tetraRed 
                               dark:border-gray-800 dark:bg-gray-900 rounded-md sm:w-30 sm:h-30 md:w-32 md:h-32"
               >
                 <a
