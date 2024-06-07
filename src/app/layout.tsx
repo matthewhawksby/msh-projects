@@ -6,7 +6,6 @@ import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 const openSans = Open_Sans({ subsets: ["latin"] });
-const creepster = Creepster({ weight: "400", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Matthew Hawksby's Website",

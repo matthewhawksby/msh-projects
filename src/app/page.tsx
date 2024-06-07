@@ -2,120 +2,126 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="mt:1000px p-2">
-      <div
-      //   class="relative"
-      >
-        <div
-        //class="inline-flex items-center overflow-hidden rounded-md border bg-white dark:border-gray-800 dark:bg-gray-900"
-        >
-          <a
-            href="#"
-            //class="border-e px-4 py-2 text-sm/none text-gray-600 hover:bg-gray-50 hover:text-gray-700 dark:border-e-gray-800 dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-gray-200"
-          >
-            Edit
-          </a>
-
-          <button
-          //class="h-full p-2 text-gray-600 hover:bg-gray-50 hover:text-gray-700 dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-gray-200"
-          >
-            <span
-            //  class="sr-only"
-            >
-              Menu
-            </span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              //   class="h-4 w-4"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                clip-rule="evenodd"
-              />
-            </svg>
-          </button>
-        </div>
-
-        <div
-          //class="absolute end-0 z-10 mt-2 w-56 rounded-md border border-gray-100 bg-white shadow-lg dark:border-gray-800 dark:bg-gray-900"
-          role="menu"
-        >
-          <div
-          //class="p-2"
-          >
-            <a
-              href="#"
-              //class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-300"
-              role="menuitem"
-            >
-              View on Storefront
-            </a>
-
-            <a
-              href="#"
-              //class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-300"
-              role="menuitem"
-            >
-              View Warehouse Info
-            </a>
-
-            <a
-              href="#"
-              //class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-300"
-              role="menuitem"
-            >
-              Duplicate Product
-            </a>
-
-            <a
-              href="#"
-              //class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-300"
-              role="menuitem"
-            >
-              Unpublish Product
-            </a>
-
-            <form method="POST" action="#">
-              <button
-                type="submit"
-                //class="flex w-full items-center gap-2 rounded-lg px-4 py-2 text-sm text-red-700 hover:bg-red-50 dark:text-red-500 dark:hover:bg-red-600/10"
-                role="menuitem"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  //class="h-4 w-4"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
-                  />
-                </svg>
-                Delete Product
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-
-      <div className="border-4 p-3 rounded-lg">
+    <main className="p-2 md:pl-48 md:pr-48 lg:pl-48 lg:pr:48">
+      <div className="pl-100 border-4 p-3 rounded-lg">
         <header className="">
-          <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
+          <div className="z-10 w-full max-w-7xl items-center justify-between text-sm flex">
             <Image
               src="/ac-mshblack192.png"
               alt="Matthew Scott Hawksby Logo"
-              className="dark:invert p-2"
+              className="dark:hidden p-2 w-22 sm:w-30 md:w-32 lg:w-30"
               width={100}
               height={100}
-              priority //?
+              priority
             />
+            {/*
+            <Image
+              src=""
+              alt="Dark Mode MSH Logo"
+              className="light:hidden p-2 w-22 sm:w-30 md:w-32 lg:w-30"
+              width={100}
+              height={100}
+              priority
+            />
+            */}
+            <div className="hidden md:visible">
+              <ul className="">
+                <li>Projects</li>
+                <li>Other</li>
+                <li>About</li>
+                <li>Fourth</li>
+              </ul>
+            </div>
+            <div className="md:hidden lg:hidden">
+              {/*TODO:: 
+                 Break everything apart into seperate reusable components.
+                 Make the Menu work correctly
+                 Add in the header elements with hover and current page underlined.
+                 Make the Menu work
+                 All of this should display differently in dark mode.
+                 Make the Menu inline.
+                  */}
+              <div
+                className="sans font-dm-sans inline-flex items-center overflow-hidden border-gray-300 bg-black 
+                              dark:border-gray-800 dark:bg-gray-900 rounded-md sm:w-30 sm:h-30 md:w-32 md:h-32"
+              >
+                <a
+                  href="#"
+                  className="border-e px-4 py-2 text-sm/none text-white text-large bg-gray-900 sm:w-30 sm:h-24 md:w-32 md:h-32 dark:border-e-gray-800 dark:text-gray-300"
+                >
+                  MENU
+                </a>
+              </div>
+
+              <div
+                className="absolute end-0 z-10 mt-2 w-56 rounded-md border border-gray-100 bg-white shadow-lg 
+                           dark:border-gray-800 dark:bg-gray-900"
+                role="menu"
+              >
+                <div className="p-2">
+                  <a
+                    href="#"
+                    className="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700 
+                               dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-300"
+                    role="menuitem"
+                  >
+                    Projects
+                  </a>
+
+                  <a
+                    href="#"
+                    className="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700 
+                               dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-300"
+                    role="menuitem"
+                  >
+                    Blog
+                  </a>
+
+                  <a
+                    href="#"
+                    className="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700
+                               dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-300"
+                    role="menuitem"
+                  >
+                    About
+                  </a>
+
+                  <a
+                    href="#"
+                    className="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700
+                               dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-300"
+                    role="menuitem"
+                  >
+                    Links
+                  </a>
+
+                  <form method="POST" action="#">
+                    <button
+                      type="submit"
+                      className="flex w-full items-center gap-2 rounded-lg px-4 py-2 text-sm text-red-700 hover:bg-red-50
+                                 dark:text-red-500 dark:hover:bg-red-600/10"
+                      role="menuitem"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-14 w-14"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                        />
+                      </svg>
+                      Inside Button Element
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
             {/*
             <p
               className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b 
@@ -181,7 +187,9 @@ export default function Home() {
             >
               <h2 className="mb-3 text-2xl font-semibold">
                 Blog{" "}
-                <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+                {/* NOTE : The group-hover translate item down there is fun.
+                    TODO:: These things are so neat.*/}
+                <span className="inline-block transition-transform group-hover:translate-y-10 motion-reduce:transform-none">
                   -&gt;
                 </span>
               </h2>

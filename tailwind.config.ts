@@ -10,6 +10,7 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
+        "dm-sans": ["DM Sans", "sans-serif"],
         sans: ["DM Sans", "Arial", "sans-serif"],
         serif: ["DM Serif", "Georgia", "serif"],
       },
@@ -21,5 +22,6 @@ const config: Config = {
     },
   },
   plugins: [],
+  important: true,
 };
 export default config;

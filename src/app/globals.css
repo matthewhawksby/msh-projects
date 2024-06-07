@@ -21,9 +21,17 @@ body {
   background: rgb(255, 255, 255);
 }
 
+.font-creepster {
+  font-family: "Creepster", serif;
+}
+
 .rotatedimage {
-  /* Does this work? */
+  /*Unused, possibly better to use html canvas.*/
   transform: rotate(45deg) !important;
+}
+
+.border {
+  border: 2px solid black;
 }
 
 @layer utilities {
