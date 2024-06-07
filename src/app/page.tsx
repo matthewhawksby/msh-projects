@@ -2,14 +2,14 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="p-2 md:pl-48 md:pr-48 lg:pl-48 lg:pr:48">
-      <div className="pl-100 border-4 p-3 rounded-lg">
+    <main className="p-2 w-screen md:pl-32 md:pr-32 lg:pl-32 lg:pr-32">
+      <div className="border-4 p-3 rounded-lg">
         <header className="">
-          <div className="z-10 w-full max-w-7xl items-center justify-between text-sm flex">
+          <div className="w-full z-10 max-w-7xl items-center justify-between flex">
             <Image
               src="/ac-mshblack192.png"
               alt="Matthew Scott Hawksby Logo"
-              className="dark:hidden p-2 w-22 sm:w-30 md:w-32 lg:w-30"
+              className="dark:hidden p-2 w-22 sm:w-24 md:w-32 lg:w-32"
               width={100}
               height={100}
               priority
@@ -24,12 +24,40 @@ export default function Home() {
               priority
             />
             */}
-            <div className="hidden md:visible">
-              <ul className="">
-                <li>Projects</li>
-                <li>Other</li>
-                <li>About</li>
-                <li>Fourth</li>
+            <div className="hidden sm:inline-flex">
+              <ul className="hidden sm:inline-flex text-2xl">
+                <li className="">
+                  <a
+                    href="#"
+                    className="block py-2 px-3 bg-white font-semibold hover:text-tetraRed"
+                  >
+                    Projects
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="block py-2 px-3 bg-white hover:text-blue-700 font-semibold hover:text-tetraBlue"
+                  >
+                    About
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="block py-2 px-3 bg-white hover:text-blue-700 font-semibold hover:text-tetraGreen"
+                  >
+                    About
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="block py-2 px-3 bg-white hover:text-blue-700 font-semibold hover:text-tetraPurple"
+                  >
+                    Fourth
+                  </a>
+                </li>
               </ul>
             </div>
             <div className="md:hidden lg:hidden">
@@ -37,9 +65,10 @@ export default function Home() {
                  Break everything apart into seperate reusable components.
                  Make the Menu work correctly
                  Add in the header elements with hover and current page underlined.
-                 Make the Menu work
                  All of this should display differently in dark mode.
                  Make the Menu inline.
+                 Add accordion Menus to the about page.
+
                   */}
               <div
                 className="sans font-dm-sans inline-flex items-center overflow-hidden border-gray-300 bg-black 
@@ -54,7 +83,7 @@ export default function Home() {
               </div>
 
               <div
-                className="absolute end-0 z-10 mt-2 w-56 rounded-md border border-gray-100 bg-white shadow-lg 
+                className="absolute collapse end-0 z-10 mt-2 w-56 rounded-md border border-gray-100 bg-white shadow-lg 
                            dark:border-gray-800 dark:bg-gray-900"
                 role="menu"
               >
@@ -159,9 +188,9 @@ export default function Home() {
           //before:lg:h-[360px]"
           ></div>
 
-          <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
+          <div className="mb-32 grid text-center lg:mb-0 lg:w-full justify-evenly lg:max-w-5xl lg:grid-cols-1 lg:text-left">
             <a
-              href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+              href=""
               className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 
               hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
               target="_blank"

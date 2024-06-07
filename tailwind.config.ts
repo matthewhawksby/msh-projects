@@ -9,6 +9,13 @@ const config: Config = {
 
   theme: {
     extend: {
+      colors: {
+        tetraRed: "#b70802",
+        tetraGreen: "#57B702",
+        tetraBlue: "#02B1B7",
+        tetraPurple: "#6302B7",
+      },
+
       fontFamily: {
         "dm-sans": ["DM Sans", "sans-serif"],
         sans: ["DM Sans", "Arial", "sans-serif"],
@@ -22,6 +29,5 @@ const config: Config = {
     },
   },
   plugins: [],
-  important: true,
 };
 export default config;

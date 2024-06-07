@@ -21,10 +21,6 @@ body {
   background: rgb(255, 255, 255);
 }
 
-.font-creepster {
-  font-family: "Creepster", serif;
-}
-
 .rotatedimage {
   /*Unused, possibly better to use html canvas.*/
   transform: rotate(45deg) !important;
