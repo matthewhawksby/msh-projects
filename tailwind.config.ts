@@ -10,6 +10,8 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        customClay: "#7c855f",
+        customOffWhite: "#F4F5F1",
         customGray: "#F2F1F5",
         tetraRed: "#b70802",
         tetraGreen: "#57B702",
@@ -21,12 +23,8 @@ const config: Config = {
         "dm-sans": ["DM Sans", "sans-serif"],
         sans: ["DM Sans", "Arial", "sans-serif"],
         serif: ["DM Serif", "Georgia", "serif"],
+        display: ["DM Serif Display", "serif"],
       },
-      //    backgroundImage: {
-      //      "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-      //      "gradient-conic":
-      //        "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      //   },
     },
   },
   plugins: [],
