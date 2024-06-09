@@ -11,7 +11,6 @@ const config: Config = {
     extend: {
       colors: {
         customClay: "#7c855f",
-        customOffWhite: "#F4F5F1",
         customGray: "#F2F1F5",
         tetraRed: "#b70802",
         tetraGreen: "#57B702",
