@@ -17,19 +17,21 @@ function Dropdown() {
         Test Button
       </button>
       {isOpen && (
-        <div
-          className="bg-white border-black border-4 absolute top-20 flex  flex-col items-start 
-          rounded-lg p-2 w-full"
-        >
-          {menucontents.map((item, i) => (
-            <div
-              className="flex w-full justify-between hover:bg-gray-300 cursor-pointer rounded-r-lg border-l-transparent"
-              key={i}
-            >
-              <h3>{item.page}</h3>
-              <h3>{item.symbol}</h3>
-            </div>
-          ))}
+        <div className="fixed inset-0 bg-gray-300/10">
+          <div
+            className="fixed inset-x-20 inset-y-20 bg-white border-black border-4 flex flex-col items-start 
+            rounded-lg p-2 z-15"
+          >
+            {menucontents.map((item, i) => (
+              <div
+                className="flex w-full justify-between hover:bg-gray-300 cursor-pointer rounded-r-lg border-l-transparent p-4 hover:border-l-white border-l-4"
+                key={i}
+              >
+                <h3 className="font-bold">{item.page}</h3>
+                <h3>{item.symbol}</h3>
+              </div>
+            ))}
+          </div>
         </div>
       )}
     </div>
