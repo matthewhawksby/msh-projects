@@ -1,5 +1,6 @@
 import Dropdown from "./components/dropdown";
 import Logo from "./components/logo";
+import Menu from "./components/menu";
 
 {
   /*TODO:: 
@@ -8,7 +9,7 @@ import Logo from "./components/logo";
       Build dropdown menu component
       Segment Anything to create a css bottom element based on the skyline.
       breaks?
-      Switch off of vercel to a regular hosted website.
+      Switch off of vercel to a regular hosted website eventually.
       Underline Slide motion (kjt)
       PostgreSQL setup.
       Curves as separators.
@@ -20,7 +21,6 @@ import Logo from "./components/logo";
       All of this should display differently in dark mode.
       Make the Menu inline.
       Add accordion Menus to the about page.
-      As you scroll down the page, the icon and navbar/menu attach to the top of the page and follow you down the page.
       Pictures.
       Make sure it works on rotations too.
       Emphasis on Applications.
@@ -32,48 +32,12 @@ import Logo from "./components/logo";
 export default function Home() {
   return (
     <main className="w-screen bg-neutral-50">
-      <div className="flex w-screen z-10 items-center justify-between border-gray-900/50 bg-white border-b-2">
+      <div className="flex w-screen items-center justify-between border-gray-900/50 bg-white border-b-2 sticky top-0 z-50">
         <Logo></Logo>
-        <div className="md:max-2xl:hidden">
+        <div className="flex md:hidden">
           <Dropdown></Dropdown>
         </div>
-        <div className="">
-          <ul className="inline-flex text-2xl text-gray-900 ">
-            <li className="inline-flex">
-              <a
-                href="#"
-                className="block py-2 px-3 font-semibold hover:underline underline-offset-4 decoration-gray-900 decoration-2 delay-250"
-              >
-                Projects
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="block py-2 px-3 font-semibold hover:underline underline-offset-4 decoration-gray-900 decoration-2 delay-250"
-              >
-                Blog
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="block py-2 px-3 font-semibold hover:underline  underline-offset-4 decoration-gray-900 decoration-2 delay-250"
-              >
-                About
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="block py-2 px-3 font-semibold hover:underline underline-offset-4 decoration-gray-900 decoration-2 delay-250"
-              >
-                Links
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div className="md:max-xl:hidden"></div>
+        <Menu></Menu>
       </div>
       <div className="flex">
         <div className="pr-2 pl-2 sm:pr-4 sm-pl-4 md:pl-24 lg:pl-24">
@@ -163,6 +127,7 @@ export default function Home() {
           </p>
         </a>
       </div>
+      <div className="h-72"></div>
     </main>
   );
 }

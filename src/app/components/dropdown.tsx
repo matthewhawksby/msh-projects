@@ -7,7 +7,7 @@ import menucontents from "./menucontents.json";
 function Dropdown() {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="relative flex flex-col items-center w-[340px] h-[340px] rounded-lg">
+    <div className="relative flex flex-col items-center w-[100px] h-[50px] rounded-lg">
       <button
         onClick={() => setIsOpen((prev) => !prev)}
         className="bg-white p-4 w-full flex items-center justify-between font-bold text-lg 
