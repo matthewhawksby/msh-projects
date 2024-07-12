@@ -31,23 +31,26 @@ import Menu from "./components/menu";
 
 export default function Home() {
   return (
-    <main className="w-screen bg-neutral-50">
-      <div className="flex w-screen items-center justify-between border-gray-900/50 bg-white border-b-2 sticky top-0 z-50">
+    <main className="w-screen bg-gray-100">
+      <nav className="flex w-screen bg-neutral-100 items-center justify-between border-gray-900/50 bg-white border-b-2 sticky top-0 z-50">
         <Logo></Logo>
-        <div className="flex md:hidden">
+        <div className="inline-flex md:hidden mr-2">
           <Dropdown></Dropdown>
         </div>
-        <Menu></Menu>
-      </div>
+        <div className="hidden md:flex hover:ease-in-out hover:transform hover:origin-top">
+          <Menu></Menu>
+        </div>
+      </nav>
       <div className="flex">
         <div className="pr-2 pl-2 sm:pr-4 sm-pl-4 md:pl-24 lg:pl-24">
-          <div className="text-2xl pt-12 md:max-2xl:pb-12 font-display h-48 md:max-2xl:ml-10 md:max-2xl:text-4xl text-gray-800 font-bold">
+          <div className="bg-emerald-200 rounded-2xl text-2xl pt-12 md:max-2xl:pb-12 font-display h-48 md:max-2xl:ml-10 md:max-2xl:text-4xl text-gray-1000 font-bold">
             Matthew Hawksby is a student,<br></br> future software developer{" "}
             <br></br> and AI/ML enthusiast <br></br> living in Coquitlam, BC.
           </div>
-          <div className="pt-6 font-dm-sans w-full h-32 pt-24 md:max-2xl:w-1/2 text-center text-gray-800 font-bold border-tetraRed border-b-2 text-lg lg:pb-12 md:max-2xl:pt-10 md:max-2xl:pl-6">
-            Please get in touch if you&apos;re interested in my projects.
-            <br></br> I am actively looking for internships.
+          <div className="pt-6 font-dm-sans w-full h-32 pt-24 md:max-2xl:w-1/2 text-center text-gray-1000 font-bold border-tetraRed border-b-2 text-lg lg:pb-12 md:max-2xl:pt-10 md:max-2xl:pl-6">
+            Always interested in learning new things.
+            <br></br>I hope to find ways to bring substantial value to the
+            companies and organizations that I work for in the future.
           </div>
         </div>
         <div className="bg-red-50 h-72 md:max-2xl:w-1/3">Testing</div>

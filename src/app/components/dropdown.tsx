@@ -7,19 +7,19 @@ import menucontents from "./menucontents.json";
 function Dropdown() {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="relative flex flex-col items-center w-[100px] h-[50px] rounded-lg">
+    <div className="flex w-24 h-16 rounded-lg border-2 border-black bg-gray-800">
       <button
         onClick={() => setIsOpen((prev) => !prev)}
-        className="bg-white p-4 w-full flex items-center justify-between font-bold text-lg 
-        rounded-lg tracking-wider border-2 border-transparent active:border-black duration-300 
-        active:text-black"
+        className="p-4 flex w-full items-center justify-between font-semibold text-sm 
+        text-rounded-lg active:border-black duration-300 
+        active:text-white bg-gray-100 text-black"
       >
-        Test Button
+        MENU
       </button>
       {isOpen && (
-        <div className="fixed inset-0 bg-gray-300/10">
+        <div className="fixed tracking-wider top-28 bottom-8 inset-x-14 bg-gray-300/10">
           <div
-            className="fixed inset-x-20 inset-y-20 bg-white border-black border-4 flex flex-col items-start 
+            className="fixed top-28 bottom-8 inset-x-14 bg-white border-black border-4 flex flex-col items-start 
             rounded-lg p-2 z-15"
           >
             {menucontents.map((item, i) => (

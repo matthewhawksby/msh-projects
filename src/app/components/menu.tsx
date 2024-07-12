@@ -4,7 +4,7 @@ import React from "react";
 
 function Menu() {
   return (
-    <div className="hidden md:flex">
+    <div className="hidden md:flex mr-[2rem] md:mr-[10rem]">
       <ul className="inline-flex text-2xl text-gray-900">
         <li className="inline-flex">
           <a
