@@ -7,10 +7,10 @@ import menucontents from "./menucontents.json";
 function Dropdown() {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="flex w-24 h-16 rounded-lg border-2 border-black bg-gray-800">
+    <div className="flex w-24 h-16 bg-gray-800">
       <button
         onClick={() => setIsOpen((prev) => !prev)}
-        className="p-4 flex w-full items-center justify-between font-semibold text-sm 
+        className="flex w-full items-center justify-between font-semibold text-lg 
         text-rounded-lg active:border-black duration-300 
         active:text-white bg-gray-100 text-black"
       >
