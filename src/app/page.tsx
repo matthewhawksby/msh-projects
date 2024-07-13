@@ -1,6 +1,7 @@
 import Dropdown from "./components/dropdown";
 import Logo from "./components/logo";
 import Menu from "./components/menu";
+import Grid from "./components/grid";
 import ScrollBox from "./components/scrollbox";
 
 {
@@ -32,7 +33,7 @@ import ScrollBox from "./components/scrollbox";
       Make sure it works on rotations too.
       Emphasis on Applications.
       Projects page: Give it a second nav bar with a list of projects.
-      Blog: Needs full functional for code display etc.
+      Blog: Needs full functionality for code display etc.
       */
 }
 
@@ -48,8 +49,9 @@ export default function Home() {
           <Menu></Menu>
         </div>
       </nav>
-      <div className="flex justify-center sm:pr-4 sm:pl-4 md:pl-40 md:pr-40">
-        <div className="grow bg-emerald-100">
+      <div className="justify-center sm:pr-4 sm:pl-4 md:pl-40 md:pr-40">
+        <Grid></Grid>
+        <div>
           <div className="bg-emerald-200 p-12 rounded-lg text-2xl pt-12 md:max-2xl:pb-12 font-display h-48 md:max-2xl:ml-10 md:max-2xl:text-4xl text-gray-1000 font-bold">
             Matthew Hawksby is a student,<br></br> future software developer{" "}
             <br></br> and AI/ML enthusiast <br></br> living in Coquitlam, BC.

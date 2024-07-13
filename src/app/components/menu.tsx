@@ -1,42 +1,51 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 
 function Menu() {
   return (
     <div className="hidden md:flex">
       <ul className="inline-flex text-2xl text-gray-900">
         <li className="inline-flex">
-          <a
-            href="#"
+          <Link
+            href="./"
+            className="block py-2 px-3 font-semibold hover:underline underline-offset-4 decoration-gray-900 decoration-2 delay-250"
+          >
+            Main
+          </Link>
+        </li>
+        <li className="inline-flex">
+          <Link
+            href="./projects"
             className="block py-2 px-3 font-semibold hover:underline underline-offset-4 decoration-gray-900 decoration-2 delay-250"
           >
             Projects
-          </a>
+          </Link>
         </li>
         <li>
-          <a
-            href="#"
+          <Link
+            href="./blog"
             className="block py-2 px-3 font-semibold hover:underline underline-offset-4 decoration-gray-900 decoration-2 delay-250"
           >
             Blog
-          </a>
+          </Link>
         </li>
         <li>
-          <a
-            href="#"
-            className="block py-2 px-3 font-semibold hover:underline  underline-offset-4 decoration-gray-900 decoration-2 delay-250"
+          <Link
+            href="./about"
+            className="block py-2 px-3 font-semibold hover:underline underline-offset-4 decoration-gray-900 decoration-2 delay-250"
           >
             About
-          </a>
+          </Link>
         </li>
         <li>
-          <a
-            href="#"
+          <Link
+            href="./links"
             className="block py-2 px-3 font-semibold hover:underline underline-offset-4 decoration-gray-900 decoration-2 delay-250"
           >
             Links
-          </a>
+          </Link>
         </li>
       </ul>
     </div>
