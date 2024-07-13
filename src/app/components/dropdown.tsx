@@ -7,17 +7,17 @@ import menucontents from "./menucontents.json";
 function Dropdown() {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="flex w-24 h-16 bg-gray-800">
+    <div className="flex w-24 h-16 bg-neutral-200">
       <button
         onClick={() => setIsOpen((prev) => !prev)}
         className="flex w-full items-center justify-between font-semibold text-xl 
         text-rounded-lg active:border-black duration-300 
-        active:text-white bg-gray-100 text-black"
+        active:text-white bg-neutral-200 text-black"
       >
-        MENU!
+        MENU
       </button>
       {isOpen && (
-        <div className="fixed tracking-wider top-28 bottom-8 inset-x-14 bg-gray-300/10">
+        <div className="fixed tracking-wider top-28 bottom-8 inset-x-14 bg-neutral-200/10">
           <div
             className="fixed top-28 bottom-8 inset-x-14 bg-white border-black border-4 flex flex-col items-start 
             rounded-lg p-2 z-15"

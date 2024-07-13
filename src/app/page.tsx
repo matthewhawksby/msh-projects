@@ -5,6 +5,12 @@ import ScrollBox from "./components/scrollbox";
 
 {
   /*TODO:: 
+   *  AI-ML uses in art and creative visuals.
+   *  AI-ML uses in data visualization.
+   *  AI-ML uses in historical topics.
+   *  AI-ML uses in a small browser game (chess engine?).
+   *  AI-ML uses with a chatbot.
+   *  Projects by topic (create tags to immediately identify)
       Try using very subtle gradients in text boxes.
       Separate Elements for name and description
       Build dropdown menu component
@@ -42,103 +48,101 @@ export default function Home() {
           <Menu></Menu>
         </div>
       </nav>
-      <div className="flex justify-center sm:pr-4 sm:pl-4 md:pl-32 md:pr-32">
-        <div>
-          <div className="inline-flex md:pl-24 md:pl-24">
-            <div className="bg-emerald-200 p-12 rounded-full text-2xl pt-12 md:max-2xl:pb-12 font-display h-48 md:max-2xl:ml-10 md:max-2xl:text-4xl text-gray-1000 font-bold">
-              Matthew Hawksby is a student,<br></br> future software developer{" "}
-              <br></br> and AI/ML enthusiast <br></br> living in Coquitlam, BC.
-            </div>
-            <div className="bg-red-50 h-72 md:w-1/3">Testing</div>
-            <ScrollBox
-              bgColor="bg-emerald-500"
-              width={10}
-              height={20}
-            ></ScrollBox>
+      <div className="flex justify-center sm:pr-4 sm:pl-4 md:pl-40 md:pr-40">
+        <div className="grow bg-emerald-100">
+          <div className="bg-emerald-200 p-12 rounded-lg text-2xl pt-12 md:max-2xl:pb-12 font-display h-48 md:max-2xl:ml-10 md:max-2xl:text-4xl text-gray-1000 font-bold">
+            Matthew Hawksby is a student,<br></br> future software developer{" "}
+            <br></br> and AI/ML enthusiast <br></br> living in Coquitlam, BC.
           </div>
-          <div className="flex pt-6 font-dm-sans w-full h-32 pt-24 md:max-2xl:w-1/2 text-center text-gray-1000 font-bold border-tetraRed border-b-2 text-lg lg:pb-12 md:max-2xl:pt-10 md:max-2xl:pl-6">
+          <div className="bg-red-50 h-72 md:w-1/3">Testing</div>
+          <ScrollBox
+            bgColor="bg-emerald-500"
+            width={10}
+            height={20}
+          ></ScrollBox>
+          <div className="flex justify-center pt-6 font-dm-sans w-full h-32 pt-24 md:max-2xl:w-1/2 text-center text-gray-1000 font-bold border-tetraRed border-b-2 text-lg lg:pb-12 md:max-2xl:pt-10 md:max-2xl:pl-6">
             Always interested in learning new things.
             <br></br>I hope to find ways to bring substantial value to the
             companies and organizations that I work for in the future.
           </div>
-        </div>
-        <div className="pt-12 mb-32 grid text-center lg:mb-0 lg:w-full justify-evenly gap-4 lg:max-w-5xl sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:text-left">
-          <a
-            href=""
-            className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 
+          <div className="flex justify-center">
+            <div className="grid pt-12 mb-32 text-center lg:mb-0 lg:w-full justify-evenly gap-4 lg:max-w-5xl sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:text-left">
+              <a
+                href=""
+                className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 
               hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className="mb-3 text-2xl font-semibold">
-              Projects{" "}
-              <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                -&gt;
-              </span>
-            </h2>
-            <p className="m-0 max-w-[30ch] text-sm opacity-50">
-              First Text Box is located here. Create link to Projects page.
-            </p>
-          </a>
-
-          <a
-            href=""
-            className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <h2 className="mb-3 text-2xl font-semibold">
+                  Projects{" "}
+                  <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+                    -&gt;
+                  </span>
+                </h2>
+                <p className="m-0 max-w-[30ch] text-sm opacity-50">
+                  First Text Box is located here. Create link to Projects page.
+                </p>
+              </a>
+              <a
+                href=""
+                className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 
               hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className="mb-3 text-2xl font-semibold">
-              Blog{" "}
-              {/* NOTE : The group-hover translate item down there is fun.
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <h2 className="mb-3 text-2xl font-semibold">
+                  Blog{" "}
+                  {/* NOTE : The group-hover translate item down there is fun.
                     TODO:: These things are so neat.*/}
-              <span className="inline-block transition-transform group-hover:translate-y-10 motion-reduce:transform-none">
-                -&gt;
-              </span>
-            </h2>
-            <p className="m-0 max-w-[30ch] text-sm opacity-50">
-              Second Text Box. Link to Blog.
-            </p>
-          </a>
+                  <span className="inline-block transition-transform group-hover:translate-y-10 motion-reduce:transform-none">
+                    -&gt;
+                  </span>
+                </h2>
+                <p className="m-0 max-w-[30ch] text-sm opacity-50">
+                  Second Text Box. Link to Blog.
+                </p>
+              </a>
 
-          <a
-            href=""
-            className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 
+              <a
+                href=""
+                className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 
               hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className="mb-3 text-2xl font-semibold">
-              About{" "}
-              <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                -&gt;
-              </span>
-            </h2>
-            <p className="m-0 max-w-[30ch] text-sm opacity-50">
-              Third Text Box, link to About information.
-            </p>
-          </a>
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <h2 className="mb-3 text-2xl font-semibold">
+                  About{" "}
+                  <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+                    -&gt;
+                  </span>
+                </h2>
+                <p className="m-0 max-w-[30ch] text-sm opacity-50">
+                  Third Text Box, link to About information.
+                </p>
+              </a>
 
-          <a
-            href=""
-            className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 
+              <a
+                href=""
+                className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 
               hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className="mb-3 text-2xl font-semibold">
-              Links{" "}
-              <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                -&gt;
-              </span>
-            </h2>
-            <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-              Miscellaneous links.
-            </p>
-          </a>
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <h2 className="mb-3 text-2xl font-semibold">
+                  Links{" "}
+                  <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+                    -&gt;
+                  </span>
+                </h2>
+                <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
+                  Miscellaneous links.
+                </p>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
-      <div className="h-72"></div>
       <nav className="flex md:pr-32 md:pl-32 h-10 w-screen bg-neutral-200 items-center justify-between border-gray-900/50 bg-white border-t-2 sticky bottom-0 z-50"></nav>
     </main>
   );
