@@ -28,7 +28,7 @@ const GridBox: React.FC<GridBoxProperties> = ({ color }) => {
 
   return (
     <div
-      className={`${color} row-span-1 m-2 h-24 w-24 rounded-lg opacity-80 col-span-1 ${isVisible ? "opacity-100" : "opacity-90"}`}
+      className={`${color} h-36 w-36 col-span-1 row-span-1 ml-1 mr-1 rounded-lg opacity-80 ${isVisible ? "opacity-100" : "opacity-90"}`}
     ></div>
   );
 };

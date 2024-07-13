@@ -51,6 +51,8 @@ export default function Home() {
       </nav>
       <div className="justify-center sm:pr-4 sm:pl-4 md:pl-40 md:pr-40">
         <Grid></Grid>
+      </div>
+      <div className="justify-center sm:pr-4 sm:pl-4 md:pl-40 md:pr-40">
         <div>
           <div className="bg-emerald-200 p-12 rounded-lg text-2xl pt-12 md:max-2xl:pb-12 font-display h-48 md:max-2xl:ml-10 md:max-2xl:text-4xl text-gray-1000 font-bold">
             Matthew Hawksby is a student,<br></br> future software developer{" "}
