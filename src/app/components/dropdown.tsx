@@ -10,11 +10,11 @@ function Dropdown() {
     <div className="flex w-24 h-16 bg-gray-800">
       <button
         onClick={() => setIsOpen((prev) => !prev)}
-        className="flex w-full items-center justify-between font-semibold text-lg 
+        className="flex w-full items-center justify-between font-semibold text-xl 
         text-rounded-lg active:border-black duration-300 
         active:text-white bg-gray-100 text-black"
       >
-        MENU
+        MENU!
       </button>
       {isOpen && (
         <div className="fixed tracking-wider top-28 bottom-8 inset-x-14 bg-gray-300/10">

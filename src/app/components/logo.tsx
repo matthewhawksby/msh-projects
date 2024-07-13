@@ -9,7 +9,7 @@ function Logo() {
       <Image
         src="/ac-mshblack192.png"
         alt="Matthew Scott Hawksby Logo"
-        className="dark:hidden inline-block w-16 m-2 ml-2 md:ml-[10rem]"
+        className="dark:hidden inline-block w-16 m-2 ml-2"
         width={100}
         height={100}
         priority
