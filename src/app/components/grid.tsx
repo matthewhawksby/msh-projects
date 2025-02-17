@@ -5,7 +5,7 @@ import GridBox from "./gridbox";
 
 const Grid = () => {
   return (
-    <div className="grid gird-cols-2 sm:grid-rows-3 md:grid-cols-8 lg:grid-rows-12 w-full h-full gap-1">
+    <div className="grid grid-cols-[repeat(auto-fit,minmax(100px,1fr))] max-w-screen-lg mx-auto w-full h-full max-w-[960px] gap-[16px]">
       <GridBox color="bg-emerald-100"></GridBox>
       <GridBox color="bg-emerald-200"></GridBox>
       <GridBox color="bg-emerald-300"></GridBox>
@@ -14,7 +14,7 @@ const Grid = () => {
       <GridBox color="bg-emerald-600"></GridBox>
       <GridBox color="bg-emerald-700"></GridBox>
       <GridBox color="bg-emerald-800"></GridBox>
-      <GridBox color="bg-emerald-900"></GridBox>
+      <GridBox color="bg-emerald-100"></GridBox>
       <GridBox color="bg-emerald-200"></GridBox>
       <GridBox color="bg-emerald-300"></GridBox>
       <GridBox color="bg-emerald-400"></GridBox>
@@ -22,8 +22,46 @@ const Grid = () => {
       <GridBox color="bg-emerald-600"></GridBox>
       <GridBox color="bg-emerald-700"></GridBox>
       <GridBox color="bg-emerald-800"></GridBox>
-      <GridBox color="bg-emerald-900"></GridBox>
-      <GridBox color="bg-emerald-900"></GridBox>
+      <GridBox color="bg-emerald-100"></GridBox>
+      <GridBox color="bg-emerald-200"></GridBox>
+      <GridBox color="bg-emerald-300"></GridBox>
+      <GridBox color="bg-emerald-400"></GridBox>
+      <GridBox color="bg-emerald-500"></GridBox>
+      <GridBox color="bg-emerald-600"></GridBox>
+      <GridBox color="bg-emerald-700"></GridBox>
+      <GridBox color="bg-emerald-800"></GridBox>
+      <GridBox color="bg-emerald-100"></GridBox>
+      <GridBox color="bg-emerald-200"></GridBox>
+      <GridBox color="bg-emerald-300"></GridBox>
+      <GridBox color="bg-emerald-400"></GridBox>
+      <GridBox color="bg-emerald-500"></GridBox>
+      <GridBox color="bg-emerald-600"></GridBox>
+      <GridBox color="bg-emerald-700"></GridBox>
+      <GridBox color="bg-emerald-800"></GridBox>
+      <GridBox color="bg-emerald-100"></GridBox>
+      <GridBox color="bg-emerald-200"></GridBox>
+      <GridBox color="bg-emerald-300"></GridBox>
+      <GridBox color="bg-emerald-400"></GridBox>
+      <GridBox color="bg-emerald-500"></GridBox>
+      <GridBox color="bg-emerald-600"></GridBox>
+      <GridBox color="bg-emerald-700"></GridBox>
+      <GridBox color="bg-emerald-800"></GridBox>
+      <GridBox color="bg-emerald-100"></GridBox>
+      <GridBox color="bg-emerald-200"></GridBox>
+      <GridBox color="bg-emerald-300"></GridBox>
+      <GridBox color="bg-emerald-400"></GridBox>
+      <GridBox color="bg-emerald-500"></GridBox>
+      <GridBox color="bg-emerald-600"></GridBox>
+      <GridBox color="bg-emerald-700"></GridBox>
+      <GridBox color="bg-emerald-800"></GridBox>
+      <GridBox color="bg-emerald-100"></GridBox>
+      <GridBox color="bg-emerald-200"></GridBox>
+      <GridBox color="bg-emerald-300"></GridBox>
+      <GridBox color="bg-emerald-400"></GridBox>
+      <GridBox color="bg-emerald-500"></GridBox>
+      <GridBox color="bg-emerald-600"></GridBox>
+      <GridBox color="bg-emerald-700"></GridBox>
+      <GridBox color="bg-emerald-800"></GridBox>
     </div>
   );
 };

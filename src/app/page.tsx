@@ -3,7 +3,7 @@ import Logo from "./components/logo";
 import Menu from "./components/menu";
 import Grid from "./components/grid";
 import ScrollBox from "./components/scrollbox";
-
+import FloatingTextbox from "./components/textbox";
 {
   /*TODO:: 
    *  AI-ML uses in art and creative visuals.
@@ -49,14 +49,16 @@ export default function Home() {
           <Menu></Menu>
         </div>
       </nav>
-      <div className="justify-center sm:pr-4 sm:pl-4 md:pl-40 md:pr-40">
-        <Grid></Grid>
-      </div>
+
+
+        <div className="font-body justify-center sm:pr-4 sm:pl-4 md:pl-12 md:pr-12">
+          <FloatingTextbox></FloatingTextbox>
+          <Grid></Grid>
+        </div>
       <div className="justify-center sm:pr-4 sm:pl-4 md:pl-40 md:pr-40">
         <div>
           <div className="bg-emerald-200 p-12 rounded-lg text-2xl pt-12 md:max-2xl:pb-12 font-display h-48 md:max-2xl:ml-10 md:max-2xl:text-4xl text-gray-1000 font-bold">
-            Matthew Hawksby is a student,<br></br> future software developer{" "}
-            <br></br> and AI/ML enthusiast <br></br> living in Coquitlam, BC.
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
           </div>
           <div className="bg-red-50 h-72 md:w-1/3">Testing</div>
           <ScrollBox
@@ -146,6 +148,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+
       </div>
       <nav className="flex md:pr-32 md:pl-32 h-10 w-screen bg-neutral-200 items-center justify-between border-gray-900/50 bg-white border-t-2 sticky bottom-0 z-50"></nav>
     </main>

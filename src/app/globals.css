@@ -16,6 +16,13 @@
   }
 }
 
+@font-face {
+  font-family: "Iosevka";
+  src: url("/fonts/Iosevka.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   color: rgb(0, 0, 0);
   background: rgb(244, 245, 241);

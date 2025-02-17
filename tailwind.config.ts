@@ -19,13 +19,13 @@ const config: Config = {
       },
 
       fontFamily: {
-        "dm-sans": ["DM Sans", "sans-serif"],
-        sans: ["DM Sans", "Arial", "sans-serif"],
-        serif: ["DM Serif", "Georgia", "serif"],
-        display: ["DM Serif Display", "serif"],
+        title: ["var(--font-open-sans)", "sans-serif"], // Open Sans for Titles
+        body: ["Iosevka", "monospace"], // Iosevka for Body Text
       },
     },
   },
   plugins: [],
 };
 export default config;
+
+

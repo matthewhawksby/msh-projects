@@ -1,25 +1,24 @@
 import type { Metadata } from "next";
-import { DM_Sans, Inter } from "next/font/google";
 import { Open_Sans } from "next/font/google";
 import "./globals.css";
+import Head from "next/head";
 
-const inter = Inter({ subsets: ["latin"] });
-const openSans = Open_Sans({ subsets: ["latin"] });
-const dmSans = DM_Sans({ subsets: ["latin"] });
+// Load Open Sans (for Titles)
+const openSans = Open_Sans({ subsets: ["latin"], weight: ["400", "700"], variable: "--font-open-sans" });
 
 export const metadata: Metadata = {
   title: "Matthew Hawksby's Website",
   description: "A personal project webpage by Matthew Hawksby",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className={openSans.className}>{children}</body>
+    <html lang="en" className={openSans.variable}>
+      <Head>
+        {/* Load Iosevka from CDN */}
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Iosevka/6.0.0/iosevka/iosevka.min.css" />
+      </Head>
+      <body className="font-body">{children}</body>
     </html>
   );
 }
