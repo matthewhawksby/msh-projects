@@ -53,23 +53,9 @@ export default function Home() {
       <div className="mt-[3vw] mb-[2vw]">
         <div className="font-body justify-center sm:pr-4 sm:pl-4 md:pl-12 md:pr-12">
           <FloatingTextbox><p className="font-body text-2xl">
-          I previously worked as a cheesemaker for the company, Saputo. Ill put the other about stuff here.</p> 
-          <br></br> 
-          <p>
-          I have interests in natural language processing, machine reasoning and other topics. Id like to set this
-          website up to be a home to a bunch of fun little projects and math or data visualizations.
-        </p>
+          I previously worked as a cheesemaker for the company, Saputo, mainly producing cheddar, mozzarella and jalapeño jack. I&apos;ll put some other about stuff here later!</p> 
         <br></br>
-        <p className="font-body text-lg">
-          I am also very involved in Burnaby Mountain Toastmasters, the resident Toastmasters club at SFU, where I am the VP of Membership. Its a lot of fun delivering speeches on different topics
-          and encouraging others to get out of their shell. 
-        </p>
-        <br></br>
-        <p className="font-body text-lg mt-4">
-        As part of my interest in natural language processing, I am currently a volunteer R.A. with the linguistics department at SFU.
-          I will eventually be putting up all my projects on this website. I would like to build it into a full blog as well!
-        
-        </p></FloatingTextbox>
+</FloatingTextbox>
           
           <Grid color="yellow"></Grid>
         </div>
