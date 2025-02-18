@@ -53,7 +53,7 @@ export default function Home() {
       </nav>
       <div className="mt-[3vw] mb-[2vw]">
         <div className="font-body justify-center sm:pr-4 sm:pl-4 md:pl-12 md:pr-12">
-          <FloatingTextbox>
+          <FloatingTextbox> I'll put some links here later. I am on linkedin, codewars, devpost and many other sites.
 
         </FloatingTextbox>
           
