@@ -2,7 +2,11 @@
 
 import React from "react";
 
-const FloatingTextbox: React.FC = () => {
+interface FloatingTextboxProps {
+  children: React.ReactNode;
+}
+
+const FloatingTextbox: React.FC<FloatingTextboxProps> = ({ children }) => {
   return (
     <div className="relative">
       <div className="absolute top-[10vh] left-1/3 transform -translate-x-1/2 
@@ -10,17 +14,20 @@ const FloatingTextbox: React.FC = () => {
                       min-h-[500px] sm:min-h-[500px] md:min-h-[500px] 
                       p-6 bg-white bg-opacity-80 backdrop-blur-sm shadow-sm rounded-lg 
                       z-10 text-lg leading-relaxed text-gray-900">
-        <p className="font-body text-lg">
-          My name is Matthew Hawksby, a Computer Science and Mathematics student at Simon Fraser University in BC Canada. This website is a work in progress!
-        </p>
-        <p className="font-body text-lg mt-4">
-          I will eventually be putting up all my projects on this website. I would like to build it into a full blog with links to various projects!
-        </p>
+        <p>{children}</p>
       </div>
     </div>
   );
 };
 
 export default FloatingTextbox;
+
+
+
+
+
+
+
+
 
 

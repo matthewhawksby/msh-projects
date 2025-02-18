@@ -3,124 +3,17 @@
 import React, { useEffect, useState } from "react";
 import GridBox from "./gridbox";
 
-const Grid = () => {
+interface GridProps{
+  color: string;
+}
+
+const Grid: React.FC<GridProps> = ({ color }) => {
   return (
-    <div className="grid grid-cols-[repeat(auto-fit,minmax(100px,1fr))] max-w-screen-lg mx-auto w-full h-full max-w-[1960px] gap-[50px]">
-      <GridBox color="bg-emerald-100"></GridBox>
-      <GridBox color="bg-emerald-200"></GridBox>
-      <GridBox color="bg-emerald-300"></GridBox>
-      <GridBox color="bg-emerald-400"></GridBox>
-      <GridBox color="bg-emerald-500"></GridBox>
-      <GridBox color="bg-emerald-600"></GridBox>
-      <GridBox color="bg-emerald-700"></GridBox>
-      <GridBox color="bg-emerald-800"></GridBox>
-      <GridBox color="bg-emerald-900"></GridBox>
-      <GridBox color="bg-emerald-100"></GridBox>
-      <GridBox color="bg-emerald-200"></GridBox>
-      <GridBox color="bg-emerald-300"></GridBox>
-      <GridBox color="bg-emerald-400"></GridBox>
-      <GridBox color="bg-emerald-500"></GridBox>
-      <GridBox color="bg-emerald-600"></GridBox>
-      <GridBox color="bg-emerald-700"></GridBox>
-      <GridBox color="bg-emerald-800"></GridBox>
-      <GridBox color="bg-emerald-100"></GridBox>
-      <GridBox color="bg-emerald-200"></GridBox>
-      <GridBox color="bg-emerald-300"></GridBox>
-      <GridBox color="bg-emerald-400"></GridBox>
-      <GridBox color="bg-emerald-500"></GridBox>
-      <GridBox color="bg-emerald-600"></GridBox>
-      <GridBox color="bg-emerald-700"></GridBox>
-      <GridBox color="bg-emerald-800"></GridBox>
-      <GridBox color="bg-emerald-100"></GridBox>
-      <GridBox color="bg-emerald-200"></GridBox>
-      <GridBox color="bg-emerald-300"></GridBox>
-      <GridBox color="bg-emerald-400"></GridBox>
-      <GridBox color="bg-emerald-500"></GridBox>
-      <GridBox color="bg-emerald-600"></GridBox>
-      <GridBox color="bg-emerald-700"></GridBox>
-      <GridBox color="bg-emerald-800"></GridBox>
-      <GridBox color="bg-emerald-100"></GridBox>
-      <GridBox color="bg-emerald-200"></GridBox>
-      <GridBox color="bg-emerald-300"></GridBox>
-      <GridBox color="bg-emerald-400"></GridBox>
-      <GridBox color="bg-emerald-500"></GridBox>
-      <GridBox color="bg-emerald-600"></GridBox>
-      <GridBox color="bg-emerald-700"></GridBox>
-      <GridBox color="bg-emerald-800"></GridBox>
-      <GridBox color="bg-emerald-100"></GridBox>
-      <GridBox color="bg-emerald-200"></GridBox>
-      <GridBox color="bg-emerald-300"></GridBox>
-      <GridBox color="bg-emerald-400"></GridBox>
-      <GridBox color="bg-emerald-500"></GridBox>
-      <GridBox color="bg-emerald-600"></GridBox>
-      <GridBox color="bg-emerald-700"></GridBox>
-      <GridBox color="bg-emerald-800"></GridBox>
-      <GridBox color="bg-emerald-100"></GridBox>
-      <GridBox color="bg-emerald-200"></GridBox>
-      <GridBox color="bg-emerald-300"></GridBox>
-      <GridBox color="bg-emerald-400"></GridBox>
-      <GridBox color="bg-emerald-500"></GridBox>
-      <GridBox color="bg-emerald-600"></GridBox>
-      <GridBox color="bg-emerald-700"></GridBox>
-      <GridBox color="bg-emerald-800"></GridBox>
-      <GridBox color="bg-emerald-100"></GridBox>
-      <GridBox color="bg-emerald-200"></GridBox>
-      <GridBox color="bg-emerald-300"></GridBox>
-      <GridBox color="bg-emerald-400"></GridBox>
-      <GridBox color="bg-emerald-500"></GridBox>
-      <GridBox color="bg-emerald-600"></GridBox>
-      <GridBox color="bg-emerald-700"></GridBox>
-      <GridBox color="bg-emerald-800"></GridBox>
-      <GridBox color="bg-emerald-900"></GridBox>
-      <GridBox color="bg-emerald-100"></GridBox>
-      <GridBox color="bg-emerald-200"></GridBox>
-      <GridBox color="bg-emerald-300"></GridBox>
-      <GridBox color="bg-emerald-400"></GridBox>
-      <GridBox color="bg-emerald-500"></GridBox>
-      <GridBox color="bg-emerald-600"></GridBox>
-      <GridBox color="bg-emerald-700"></GridBox>
-      <GridBox color="bg-emerald-800"></GridBox>
-      <GridBox color="bg-emerald-100"></GridBox>
-      <GridBox color="bg-emerald-200"></GridBox>
-      <GridBox color="bg-emerald-300"></GridBox>
-      <GridBox color="bg-emerald-400"></GridBox>
-      <GridBox color="bg-emerald-500"></GridBox>
-      <GridBox color="bg-emerald-600"></GridBox>
-      <GridBox color="bg-emerald-700"></GridBox>
-      <GridBox color="bg-emerald-800"></GridBox>
-      <GridBox color="bg-emerald-100"></GridBox>
-      <GridBox color="bg-emerald-200"></GridBox>
-      <GridBox color="bg-emerald-300"></GridBox>
-      <GridBox color="bg-emerald-400"></GridBox>
-      <GridBox color="bg-emerald-500"></GridBox>
-      <GridBox color="bg-emerald-600"></GridBox>
-      <GridBox color="bg-emerald-700"></GridBox>
-      <GridBox color="bg-emerald-800"></GridBox>
-      <GridBox color="bg-emerald-100"></GridBox>
-      <GridBox color="bg-emerald-200"></GridBox>
-      <GridBox color="bg-emerald-300"></GridBox>
-      <GridBox color="bg-emerald-400"></GridBox>
-      <GridBox color="bg-emerald-500"></GridBox>
-      <GridBox color="bg-emerald-600"></GridBox>
-      <GridBox color="bg-emerald-700"></GridBox>
-      <GridBox color="bg-emerald-800"></GridBox>
-      <GridBox color="bg-emerald-100"></GridBox>
-      <GridBox color="bg-emerald-200"></GridBox>
-      <GridBox color="bg-emerald-300"></GridBox>
-      <GridBox color="bg-emerald-400"></GridBox>
-      <GridBox color="bg-emerald-500"></GridBox>
-      <GridBox color="bg-emerald-600"></GridBox>
-      <GridBox color="bg-emerald-700"></GridBox>
-      <GridBox color="bg-emerald-800"></GridBox>
-      <GridBox color="bg-emerald-100"></GridBox>
-      <GridBox color="bg-emerald-200"></GridBox>
-      <GridBox color="bg-emerald-300"></GridBox>
-      <GridBox color="bg-emerald-400"></GridBox>
-      <GridBox color="bg-emerald-500"></GridBox>
-      <GridBox color="bg-emerald-600"></GridBox>
-      <GridBox color="bg-emerald-700"></GridBox>
-      <GridBox color="bg-emerald-800"></GridBox>
-    </div>
+      <div className="grid sm:grid-cols-3 md:grid-cols-6 lg:grid-cols-9 gap-y-[1vw] gap-x-[1vw] mt-[3vw] w-full h-full">
+        {Array.from({ length: 36 }).map((_, index) => (
+          <GridBox key={index} color={`bg-${color}-${(index % 9 + 1) * 100}`} size="w-[9vw] h-[9vw]" />
+        ))}
+      </div>
   );
 };
 

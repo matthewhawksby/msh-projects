@@ -4,6 +4,7 @@ import Menu from "./components/menu";
 import Grid from "./components/grid";
 import ScrollBox from "./components/scrollbox";
 import FloatingTextbox from "./components/textbox";
+import Roundel from "./components/roundel";
 {
   /*TODO:: 
    *  AI-ML uses in art and creative visuals.
@@ -17,7 +18,6 @@ import FloatingTextbox from "./components/textbox";
       Build dropdown menu component
       Segment Anything to create a css bottom element based on the skyline.
       breaks?
-      Switch off of vercel to a regular hosted website eventually.
       Underline Slide motion (kjt)
       PostgreSQL setup.
       Curves as separators.
@@ -49,12 +49,31 @@ export default function Home() {
           <Menu></Menu>
         </div>
       </nav>
+      <div className="mt-[3vw] mb-[2vw]">
         <div className="font-body justify-center sm:pr-4 sm:pl-4 md:pl-12 md:pr-12">
-          <FloatingTextbox></FloatingTextbox>
-          <Grid></Grid>
+          <FloatingTextbox><p className="font-body text-2xl">
+          my name is <b>matthew hawksby</b>, i am a computer science and mathematics student at simon fraser university in bc canada.</p> 
+          <br></br> 
+          <p>
+          I have interests in natural language processing, machine reasoning and other topics. Id like to set this
+          website up to be a home to a bunch of fun little projects and math or data visualizations.
+        </p>
+        <br></br>
+        <p className="font-body text-lg">
+          I am also very involved in Burnaby Mountain Toastmasters, the resident Toastmasters club at SFU, where I am the VP of Membership. Its a lot of fun delivering speeches on different topics
+          and encouraging others to get out of their shell. 
+        </p>
+        <br></br>
+        <p className="font-body text-lg mt-4">
+        As part of my interest in natural language processing, I am currently a volunteer R.A. with the linguistics department at SFU.
+          I will eventually be putting up all my projects on this website. I would like to build it into a full blog as well!
+        
+        </p></FloatingTextbox>
+          
+          <Grid color="emerald"></Grid>
         </div>
+      </div>
       <div className="justify-center sm:pr-4 sm:pl-4 md:pl-40 md:pr-40">
-                  <FloatingTextbox></FloatingTextbox>
         <div>
           <ScrollBox
             bgColor="bg-emerald-500"
@@ -62,7 +81,7 @@ export default function Home() {
             height={20}
           ></ScrollBox>
           <div className="flex justify-center pt-6 font-dm-sans w-full h-32 pt-24 md:max-2xl:w-1/2 text-center text-gray-1000 font-bold border-tetraRed border-b-2 text-lg lg:pb-12 md:max-2xl:pt-10 md:max-2xl:pl-6">
-            Always interested in learning new things.
+            Font is Iosevka/Sarasa Gothic.
           </div>
         </div>
       </div>

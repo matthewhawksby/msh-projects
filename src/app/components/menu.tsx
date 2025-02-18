@@ -5,7 +5,7 @@ import Link from "next/link";
 
 function Menu() {
   return (
-    <div className="hidden md:flex">
+    <div className="hidden md:flex font-title">
       <ul className="inline-flex text-2xl text-gray-900">
         <li className="inline-flex">
           <Link

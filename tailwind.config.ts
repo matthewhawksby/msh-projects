@@ -19,13 +19,22 @@ const config: Config = {
       },
 
       fontFamily: {
-        title: ["var(--font-open-sans)", "sans-serif"], // Open Sans for Titles
-        body: ["Iosevka", "monospace"], // Iosevka for Body Text
+        title: ["var(--font-open-sans)", "sans-serif"],
+        body: ["Iosevka", "monospace"],
       },
     },
   },
+
+  safelist: [
+    {
+      pattern: /bg-(red|blue|green|emerald|purple|yellow|pink|gray)-[1-9]00/,
+      variants: ["hover", "focus"],
+    },
+  ],
+
   plugins: [],
 };
+
 export default config;
 
 

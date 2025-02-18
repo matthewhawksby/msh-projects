@@ -4,8 +4,9 @@ import React, { useEffect, useState } from "react";
 
 interface GridBoxProperties {
   color: string;
+  size: string;
 }
-const GridBox: React.FC<GridBoxProperties> = ({ color }) => {
+const GridBox: React.FC<GridBoxProperties> = ({ color, size }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -28,7 +29,7 @@ const GridBox: React.FC<GridBoxProperties> = ({ color }) => {
 
   return (
     <div
-      className={`${color} h-12 w-12 sm:h-18 sm:w-18 md:h-24 md:w-24 lg:h-36 lg:w-36 x-lg:h-36 x-lg:w-36 col-span-1 row-span-1 rounded-lg  opacity-80 ${isVisible ? "opacity-100" : "opacity-90"}`}
+      className={`${color} ${size} col-span-1 row-span-1 rounded-lg  opacity-80 ${isVisible ? "opacity-100" : "opacity-90"}`}
     ></div>
   );
 };
