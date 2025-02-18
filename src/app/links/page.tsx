@@ -54,9 +54,7 @@ export default function Home() {
       <div className="mt-[3vw] mb-[2vw]">
         <div className="font-body justify-center sm:pr-4 sm:pl-4 md:pl-12 md:pr-12">
           <FloatingTextbox>
-         
-    <SocialLinks></SocialLinks>
-    
+
         </FloatingTextbox>
           
           <Grid color="gray"></Grid>
