@@ -67,8 +67,15 @@ export default function Home() {
           I will eventually be putting up all my projects on this website.... I would like to build it into a full blog as well!
         
         </p></FloatingTextbox>
-          
-          <Grid color="emerald"></Grid>
+        <div className="flex">
+            <div className="hidden lg:block">
+              <Grid color="emerald" rangeLow={1} rangeHigh={2} rows={3}></Grid>
+            </div>
+          <Grid color="emerald" rangeLow={3} rangeHigh={6} rows={3} ></Grid>
+            <div className="hidden xl:block">
+              <Grid color="emerald" rangeLow={7} rangeHigh={9} rows={3}></Grid>
+            </div>
+          </div>
         </div>
       </div>
       <div className="justify-center sm:pr-4 sm:pl-4 md:pl-40 md:pr-40">

@@ -5,13 +5,18 @@ import GridBox from "./gridbox";
 
 interface GridProps{
   color: string;
+  rangeLow : number;
+  rangeHigh : number;
+  rows : number;
 }
 
-const Grid: React.FC<GridProps> = ({ color }) => {
+
+const Grid: React.FC<GridProps> = ({ color, rangeLow, rangeHigh, rows }) => {
+  const columns = rangeHigh-rangeLow + 1; 
   return (
-      <div className="grid sm:grid-cols-3 md:grid-cols-6 lg:grid-cols-9 gap-y-[1vw] gap-x-[1vw] mt-[3vw] w-full h-full">
-        {Array.from({ length: 36 }).map((_, index) => (
-          <GridBox key={index} color={`bg-${color}-${(index % 9 + 1) * 100}`} size="w-[9vw] h-[9vw]" />
+<div className={`grid grid-cols-${columns} gap-y-[1vw] gap-x-[1vw] mt-[3vw]`}>
+        {Array.from({ length: rows*columns }).map((_, index) => (
+          <GridBox key={index} color={`bg-${color}-${((index % columns) + rangeLow-1) * 100}`} size="w-[9vw] h-[9vw]" />
         ))}
       </div>
   );

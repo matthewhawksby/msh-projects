@@ -25,15 +25,19 @@ const config: Config = {
     },
   },
 
-  safelist: [
-    {
-      pattern: /bg-(red|blue|green|emerald|purple|yellow|pink|gray)-[1-9]00/,
-      variants: ["hover", "focus"],
-    },
-  ],
-
+safelist: [
+  {
+    pattern: /bg-(red|blue|green|emerald|purple|yellow|pink|gray)-[1-9]00/,
+    variants: ["hover", "focus"],
+  },
+  {
+    pattern: /grid-cols-[1-9]/,
+  },
+],
   plugins: [],
 };
+
+
 
 export default config;
 
