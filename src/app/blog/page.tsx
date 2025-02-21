@@ -61,7 +61,7 @@ export default function Home() {
 
         </FloatingTextbox>
           
-          <Grid color="blue"></Grid>
+          <Grid color="blue" rows={2}></Grid>
         </div>
       </div>
       <div className="justify-center sm:pr-4 sm:pl-4 md:pl-40 md:pr-40">

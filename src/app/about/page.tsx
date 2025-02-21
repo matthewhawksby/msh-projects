@@ -57,7 +57,7 @@ export default function Home() {
         <br></br>
 </FloatingTextbox>
           
-          <Grid color="yellow"></Grid>
+          <Grid color="yellow" rows={2}></Grid>
         </div>
        
       </div>

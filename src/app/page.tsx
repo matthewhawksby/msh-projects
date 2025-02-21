@@ -39,8 +39,8 @@ import Roundel from "./components/roundel";
 
 export default function Home() {
   return (
-    <main className="w-screen bg-gray-100">
-      <nav className="flex md:pr-32 md:pl-32 w-screen bg-neutral-200 items-center justify-between border-gray-900/50 bg-white border-b-2 sticky top-0 z-50">
+<main className="max-w-screen bg-gray-100">
+      <nav className="flex md:pr-32 md:pl-32 max-w-full bg-neutral-200 items-center justify-between border-gray-900/50 bg-white border-b-2 sticky top-0 z-50">
         <Logo></Logo>
         <div className="inline-flex md:hidden mr-2">
           <Dropdown></Dropdown>
@@ -49,35 +49,42 @@ export default function Home() {
           <Menu></Menu>
         </div>
       </nav>
-      <div className="mt-[3vw] mb-[2vw]">
-        <div className="font-body justify-center sm:pr-4 sm:pl-4 md:pl-12 md:pr-12">
-          <FloatingTextbox><p className="font-body text-2xl">
-          Hi! My name is <b>Matthew Hawksby</b>, I&apos;m a <b>Computer Science and Mathematics</b> student at Simon Fraser University in BC Canada.</p> 
-          <br></br> 
-          <p>
-          I have interests in natural language processing, machine reasoning and other topics. I&apos;d like to set this
-          website up to be a home to a bunch of fun little projects and math or data visualizations.
-        </p>
-        <p className="font-body text-lg">
-          I am also involved with the Burnaby Mountain Toastmasters, the resident Toastmasters club at SFU, where I am the VP of Membership. 
-          It&apos;s a lot of fun delivering speeches on different topics and encouraging others to get out of their shell. 
-        </p>
-        <p className="font-body text-lg mt-4">
-        As part of my interest in natural language processing, I am currently a volunteer R.A. with the linguistics department at SFU.
-          I will eventually be putting up all my projects on this website.... I would like to build it into a full blog as well!
-        
-        </p></FloatingTextbox>
-        <div className="flex">
-            <div className="hidden lg:block">
-              <Grid color="emerald" rangeLow={1} rangeHigh={2} rows={3}></Grid>
-            </div>
-          <Grid color="emerald" rangeLow={3} rangeHigh={6} rows={3} ></Grid>
-            <div className="hidden xl:block">
-              <Grid color="emerald" rangeLow={7} rangeHigh={9} rows={3}></Grid>
-            </div>
+
+      <div className="mb-[2vw] relative max-w-screen flex font-body justify-center items-center sm:pr-1 sm:pl-1 md:pl-4 md:pr-4 lg:pl-12 lg:pr-12">
+          <div className= "absolute z-10 w-[80vw] md:w-[45vw] lg:w-[40vw] xl:w-[45vw] xl:h-[15vw]">
+          <FloatingTextbox>
+            <p className="font-body xl:h-[7vw] top-1/2 sm:text-base lg:text-lg xl:text-3xl leading-loose m-4">
+              Hi! My name is <b>Matthew Hawksby.</b>
+              <br></br>
+              <br></br> 
+              I&apos;m a <b>Computer Science and Mathematics</b> student at Simon Fraser University in BC Canada.
+            </p> 
+          </FloatingTextbox>
+          </div>
+          <div className="flex gap-1 justify-evenly">
+            <Grid color="emerald" rows={2} ></Grid>
           </div>
         </div>
+
+
+      <div className="relative bg-emerald-500 h-[50vw] rounded-lg opacity-80 h-full font-body justify-center sm:pr-4 sm:pl-4 md:pl-12 md:pr-12 mr-10 ml-10">
+        <div className="absolute z-10 w-[80vw] md:w-[45vw] lg:w-[40vw] xl:w-[45vw] xl:h-[15vw]">
+            <FloatingTextbox>
+              <p className="font-body text-2xl">
+                I have interests in natural language processing, machine reasoning and other topics. I&apos;d like to set this
+                website up to be a home to a bunch of fun little projects and math or data visualizations.
+              </p>
+              <p className="font-body text-lg">
+                I am also involved with the Burnaby Mountain Toastmasters, the resident Toastmasters club at SFU, where I am the VP of Membership. 
+                It&apos;s a lot of fun delivering speeches on different topics and encouraging others to get out of their shell. 
+                <br></br>
+                As part of my interest in natural language processing, I am currently a volunteer R.A. with the linguistics department at SFU.
+                I will eventually be putting up all my projects on this website.... I would like to build it into a full blog as well! 
+              </p>
+            </FloatingTextbox>
+          </div>
       </div>
+
       <div className="justify-center sm:pr-4 sm:pl-4 md:pl-40 md:pr-40">
         <div>
           <ScrollBox
@@ -85,12 +92,12 @@ export default function Home() {
             width={10}
             height={20}
           ></ScrollBox>
-          <div className="flex justify-center pt-6 font-dm-sans w-full h-32 pt-24 md:max-2xl:w-1/2 text-center text-gray-1000 font-bold border-tetraRed border-b-2 text-lg lg:pb-12 md:max-2xl:pt-10 md:max-2xl:pl-6">
+          <div className="flex justify-center pt-6 font-dm-sans max-w-full h-32 pt-24 md:max-2xl:w-1/2 text-center text-gray-1000 font-bold border-b-2 text-lg lg:pb-12 md:max-2xl:pt-10 md:max-2xl:pl-6">
             Font is Iosevka/Sarasa Gothic.
           </div>
         </div>
       </div>
-      <nav className="flex md:pr-32 md:pl-32 h-10 w-screen bg-neutral-200 items-center justify-between border-gray-900/50 bg-white border-t-2 sticky bottom-0 z-50"></nav>
+      <nav className="flex md:pr-32 md:pl-32 h-10 max-w-full bg-neutral-200 items-center justify-between border-gray-900/50 bg-white border-t-2 sticky bottom-0 z-50"></nav>
     </main>
   );
 }
