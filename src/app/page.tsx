@@ -50,10 +50,10 @@ export default function Home() {
         </div>
       </nav>
 
-      <div className="relative w-screen h-1/4 xl:h-1/3 font-body sm:pr-1 sm:pl-1 md:pl-4 md:pr-4 lg:pl-12 lg:pr-12 outline outline-red-500 z-50 mt-10 mb-10">
+      <div className="relative w-screen h-1/4 xl:h-1/3 font-body pr-1 pl-1 sm:pr-1 sm:pl-1 md:pl-4 md:pr-4 lg:pl-12 lg:pr-12 outline outline-red-500 z-50 mt-10 mb-10">
           <div className= "absolute z-10 w-[80vw] h-[20vw] md:w-[45vw] lg:w-[40vw] xl:w-[45vw] xl:h-[15vw] outline outline-blue-500 p-7 m-10">
           <FloatingTextbox>
-            <p className="font-body xl:h-[7vw] top-1/2 text-lg xl:text-3xl leading-tight xl:leading-loose m-4">
+            <p className="font-body xl:h-[7vw] top-1/2 text-lg xl:text-3xl leading-tight m-4">
               Hi! My name is <b>Matthew Hawksby.</b>
               <br></br>
               <br></br> 
