@@ -70,7 +70,7 @@ export default function Home() {
             bgColor="bg-blue-500"
             width={10}
             height={20}
-          ></ScrollBox>
+          ><p>t</p></ScrollBox>
           <div className="flex justify-center pt-6 font-dm-sans w-full h-32 pt-24 md:max-2xl:w-1/2 text-center text-gray-1000 font-bold border-tetraRed border-b-2 text-lg lg:pb-12 md:max-2xl:pt-10 md:max-2xl:pl-6">
             Fonts are DM Sans and Iosevka/Sarasa Gothic.
           </div>
