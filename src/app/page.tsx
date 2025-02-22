@@ -90,7 +90,7 @@ export default function Home() {
               <FloatingTextbox>
                 <p className="font-body text-2xl">
                   As part of my interest in natural language processing, I am currently a volunteer R.A. with the linguistics department at SFU.
-                  I will eventually be putting up all my projects on this website.... I would like to build it into a full blog as well! 
+                  I will eventually be putting up all my projects on this website.... I would like to build it into a full blog as well.
                 </p>
               </FloatingTextbox>
             </div>
