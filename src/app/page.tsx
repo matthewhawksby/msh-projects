@@ -67,8 +67,8 @@ export default function Home() {
         </div>
 
 
-      <div className="relative bg-emerald-500 h-[30vw] rounded-lg opacity-80 h-full font-body justify-center sm:pr-4 sm:pl-4 md:pl-12 md:pr-12 mr-10 ml-10">
-          <div className="absolute top-[2vw] z-10 w-[80vw] md:w-[45vw] lg:w-[40vw] xl:w-[45vw] xl:h-[15vw]">
+      <div className="relative bg-emerald-100 h-[40vw] rounded-lg opacity-80 h-full font-body justify-center sm:pr-4 sm:pl-4 md:pl-12 md:pr-12 mr-10 ml-10">
+          <div className="absolute top-[2vw] z-10 w-[80vw] md:w-[45vw] lg:w-[40vw] xl:w-[45vw] xl:h-[8vw] rounded-lg">
             <FloatingTextbox>
               <p className="font-body text-2xl">
                 I have interests in natural language processing, machine reasoning and other topics. I&apos;d like to set this
@@ -76,19 +76,25 @@ export default function Home() {
               </p>
             </FloatingTextbox>
             </div>
-          <div className="absolute top-[12vw] z-10 w-[80vw] md:w-[45vw] lg:w-[40vw] xl:w-[45vw] xl:h-[15vw] right-[5vw]">
+          <div className="absolute top-[12vw] z-10 w-[80vw] md:w-[45vw] lg:w-[40vw] xl:w-[45vw] xl:h-[15vw] right-[5vw] rounded-lg">
             <FloatingTextbox>
             <p className="font-body text-2xl">
                 I am also involved with the Burnaby Mountain Toastmasters, the resident Toastmasters club at SFU, where I am the VP of Membership. 
                 It&apos;s a lot of fun delivering speeches on different topics and encouraging others to get out of their shell. 
                 <br></br>
-                As part of my interest in natural language processing, I am currently a volunteer R.A. with the linguistics department at SFU.
-                I will eventually be putting up all my projects on this website.... I would like to build it into a full blog as well! 
+
               </p>
             </FloatingTextbox>
+          </div>
+          <div className="absolute top-[24vw] z-10 w-[80vw] md:w-[45vw] lg:w-[40vw] xl:w-[45vw] xl:h-[8vw] rounded-lg">
+              <FloatingTextbox>
+                <p className="font-body text-2xl">
+                  As part of my interest in natural language processing, I am currently a volunteer R.A. with the linguistics department at SFU.
+                  I will eventually be putting up all my projects on this website.... I would like to build it into a full blog as well! 
+                </p>
+              </FloatingTextbox>
             </div>
-      </div>
-
+          </div>
       <div className="justify-center sm:pr-4 sm:pl-4 md:pl-40 md:pr-40">
         <div>
           <ScrollBox

@@ -50,16 +50,17 @@ export default function Home() {
           <Menu></Menu>
         </div>
       </nav>
-      <div className="mt-[3vw] mb-[2vw]">
-        <div className="font-body justify-center sm:pr-4 sm:pl-4 md:pl-12 md:pr-12">
-          <FloatingTextbox><p className="font-body text-2xl">
-          I previously worked as a cheesemaker for the company, Saputo, mainly producing cheddar, mozzarella and jalapeño jack. I&apos;ll put some other about stuff here later!</p> 
-        <br></br>
-</FloatingTextbox>
-          
-          <Grid color="yellow" rows={2}></Grid>
+
+      <div className="relative w-screen h-1/4 xl:h-1/3 font-body pr-1 pl-1 sm:pr-1 sm:pl-1 md:pl-4 md:pr-4 lg:pl-12 lg:pr-12 z-20 mt-10 mb-10">
+        <div className= "absolute z-10 w-[80vw] h-[20vw] md:w-[45vw] lg:w-[40vw] xl:w-[45vw] xl:h-[15vw] p-7 m-10">      
+          <FloatingTextbox>
+            <p className="font-body text-2xl">
+              I previously worked as a cheesemaker for the company, Saputo, mainly producing cheddar, mozzarella and jalapeño jack. I&apos;ll put some other about stuff here later!
+            </p> 
+          <br></br>
+          </FloatingTextbox>
         </div>
-       
+          <Grid color="yellow" rows={2}></Grid>
       </div>
       <div className="justify-center sm:pr-4 sm:pl-4 md:pl-40 md:pr-40">
         <div>
