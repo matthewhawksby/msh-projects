@@ -50,10 +50,10 @@ export default function Home() {
         </div>
       </nav>
 
-      <div className="mb-[2vw] relative max-w-screen flex font-body justify-center items-center sm:pr-1 sm:pl-1 md:pl-4 md:pr-4 lg:pl-12 lg:pr-12">
-          <div className= "absolute z-10 w-[80vw] md:w-[45vw] lg:w-[40vw] xl:w-[45vw] xl:h-[15vw]">
+      <div className="relative w-screen h-1/4 xl:h-1/3 font-body pr-1 pl-1 sm:pr-1 sm:pl-1 md:pl-4 md:pr-4 lg:pl-12 lg:pr-12 outline outline-red-500 z-50 mt-10 mb-10">
+          <div className= "absolute z-10 w-[80vw] h-[20vw] md:w-[45vw] lg:w-[40vw] xl:w-[45vw] xl:h-[15vw] outline outline-blue-500 p-7 m-10">
           <FloatingTextbox>
-            <p className="font-body xl:h-[7vw] top-1/2 sm:text-base lg:text-lg xl:text-3xl leading-loose m-4">
+            <p className="font-body xl:h-[7vw] top-1/2 text-lg xl:text-3xl leading-tight xl:leading-loose m-4">
               Hi! My name is <b>Matthew Hawksby.</b>
               <br></br>
               <br></br> 
@@ -61,13 +61,13 @@ export default function Home() {
             </p> 
           </FloatingTextbox>
           </div>
-          <div className="flex gap-1 justify-evenly">
+          <div className="flex gap-1 justify-evenly outline outline-yellow-500">
             <Grid color="emerald" rows={2} ></Grid>
           </div>
         </div>
 
 
-      <div className="relative bg-emerald-500 h-[50vw] rounded-lg opacity-80 h-full font-body justify-center sm:pr-4 sm:pl-4 md:pl-12 md:pr-12 mr-10 ml-10">
+      <div className="bg-emerald-500 h-[50vw] rounded-lg opacity-80 h-full font-body justify-center sm:pr-4 sm:pl-4 md:pl-12 md:pr-12 mr-10 ml-10">
         <div className="absolute z-10 w-[80vw] md:w-[45vw] lg:w-[40vw] xl:w-[45vw] xl:h-[15vw]">
             <FloatingTextbox>
               <p className="font-body text-2xl">

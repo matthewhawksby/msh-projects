@@ -37,9 +37,9 @@ const Grid: React.FC<GridProps> = ({ color, rows }) => {
   const columns = rangeHigh - rangeLow + 1;
 
   return (
-    <div className={`grid grid-cols-${columns} gap-y-[1vw] gap-x-[1vw] mt-[3vw]`}>
+    <div className={`grid grid-cols-${columns} gap-y-[1vw] gap-x-[1vw]`}>
       {Array.from({ length: rows * columns }).map((_, index) => (
-        <GridBox key={index} color={`bg-${color}-${((index % columns) + rangeLow - 1) * 100}`} size="w-[9vw] h-[9vw]" />
+        <GridBox key={index} color={`bg-${color}-${((index % columns) + rangeLow - 1) * 100}`} size="w-[18vw] h-[18vw] sm:w-[17vw] sm:h-[17vw] md:w-[16vw] md:h-[16vw] lg:w-[12vw] lg:h-[12vw] xl:w-[9vw] xl:h-[9vw]" />
       ))}
     </div>
   );

@@ -8,7 +8,7 @@ interface FloatingTextboxProps {
 
 const FloatingTextbox: React.FC<FloatingTextboxProps> = ({ children }) => {
   return (
-  <div className="h-full w-full p-6 bg-white bg-opacity-80 shadow-sm rounded-lg text-gray-900 z-10">
+  <div className="absolute flex p-6 justify-center items-center bg-white bg-opacity-80 shadow-sm rounded-lg text-gray-900 z-10">
     {children}
   </div>  
   );
