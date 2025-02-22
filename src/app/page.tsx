@@ -67,10 +67,10 @@ export default function Home() {
         </div>
 
 
-      <div className="relative bg-emerald-500 h-[30vw] rounded-lg opacity-80 h-full font-body justify-center sm:pr-4 sm:pl-4 md:pl-12 md:pr-12 mr-10 ml-10 outline outline-blue-500">
+      <div className="relative bg-emerald-500 h-[30vw] rounded-lg opacity-80 h-full font-body justify-center sm:pr-4 sm:pl-4 md:pl-12 md:pr-12 mr-10 ml-10">
           <div className="absolute top-[2vw] z-10 w-[80vw] md:w-[45vw] lg:w-[40vw] xl:w-[45vw] xl:h-[15vw]">
             <FloatingTextbox>
-              <p className="font-body text-2xl outline outline-yellow-500">
+              <p className="font-body text-2xl">
                 I have interests in natural language processing, machine reasoning and other topics. I&apos;d like to set this
                 website up to be a home to a bunch of fun little projects and math or data visualizations.
               </p>
@@ -95,16 +95,13 @@ export default function Home() {
             bgColor="bg-emerald-500"
             width={10}
             height={20}
-          >            <p className="flex justify-center pt-6 font-dm-sans max-w-full h-32 pt-24 md:max-2xl:w-1/2 text-center text-gray-1000 font-bold border-b-2 text-lg lg:pb-12 md:max-2xl:pt-10 md:max-2xl:pl-6">Font is Iosevka/Sarasa Gothic.</p></ScrollBox>
+          >          </ScrollBox>
           <div className="flex justify-center pt-6 font-dm-sans max-w-full h-32 pt-24 md:max-2xl:w-1/2 text-center text-gray-1000 font-bold border-b-2 text-lg lg:pb-12 md:max-2xl:pt-10 md:max-2xl:pl-6">
             Font is Iosevka/Sarasa Gothic.
           </div>
         </div>
       </div>
-      <nav className="flex md:pr-32 md:pl-32 h-10 max-w-full bg-neutral-200 items-center justify-between border-gray-900/50 bg-white border-t-2 sticky bottom-0 z-50">         
-       <div className="flex justify-center pt-6 font-dm-sans max-w-full h-32 pt-24 md:max-2xl:w-1/2 text-center text-gray-1000 font-bold border-b-2 text-lg lg:pb-12 md:max-2xl:pt-10 md:max-2xl:pl-6">
-            Font is Iosevka/Sarasa Gothic.
-          </div></nav>
+      <nav className="flex md:pr-32 md:pl-32 h-10 max-w-full bg-neutral-200 items-center justify-between border-gray-900/50 bg-white border-t-2 sticky bottom-0 z-50"></nav>
     </main>
   );
 }
