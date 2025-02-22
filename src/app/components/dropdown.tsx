@@ -14,7 +14,7 @@ function Dropdown() {
         text-rounded-lg active:border-black duration-300 
         active:text-white bg-gray-800 text-white text-center justify-center rounded-xl"
       >
-        MENU2
+        MENU
       </button>
       {isOpen && (
         <div className="fixed tracking-wider top-28 bottom-8 inset-x-14 bg-neutral-200/10">
