@@ -6,12 +6,15 @@ interface ScrollBoxProperties {
   bgColor: string;
   width: number;
   height: number;
+  children: React.ReactNode;
 }
+
 
 const ScrollBox: React.FC<ScrollBoxProperties> = ({
   bgColor,
   width,
   height,
+  children
 }) => {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -37,7 +40,7 @@ const ScrollBox: React.FC<ScrollBoxProperties> = ({
     <div
       className={`flex top-0 left-0 w-full p-4 ${width} ${height} ${bgColor} text-white transition-opacity duration-500 
       ${isVisible ? "opacity-100" : "opacity-0"}`}
-    ></div>
+    >{children}</div>
   );
 };
 
