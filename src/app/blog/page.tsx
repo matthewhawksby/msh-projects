@@ -55,18 +55,27 @@ export default function Home() {
 
       <div className="relative w-screen h-1/4 xl:h-1/3 font-body pr-1 pl-1 sm:pr-1 sm:pl-1 md:pl-4 md:pr-4 lg:pl-12 lg:pr-12 z-20 mt-10 mb-10">
           <div className= "absolute z-10 w-[80vw] h-[20vw] md:w-[45vw] lg:w-[40vw] xl:w-[45vw] xl:h-[15vw] p-7 m-10">
-          <FloatingTextbox>
-            <p className="font-body xl:h-[7vw] top-1/2 text-lg xl:text-3xl leading-tight m-4">
-              Heres the blog!
-            </p> 
-          <br></br>
-            <p>
-              This is a work in progress!
-            </p>
-          </FloatingTextbox>
+            <FloatingTextbox>
+              <p className="font-body xl:h-[7vw] top-1/2 text-lg xl:text-3xl leading-tight m-4">
+                Heres the blog!
+                <br></br>
+                This is a work in progress!
+              </p>
+            </FloatingTextbox>
           </div>
           <Grid color="blue" rows={2}></Grid>
-        </div>
+      </div>
+
+    <div className="relative bg-blue-100 h-[40vw] rounded-lg opacity-80 font-body sm:pr-4 sm:pl-4 md:pl-12 md:pr-12 mr-10 ml-10">
+          <div className="absolute top-[2vw] z-10 w-[80vw] md:w-[45vw] lg:w-[40vw] xl:w-[45vw] xl:h-[8vw] rounded-lg left-[5vw]">
+            </div>
+          <div className="absolute top-[12vw] z-10 w-[80vw] md:w-[45vw] lg:w-[40vw] xl:w-[45vw] xl:h-[15vw] right-[5vw] rounded-lg right-[5vw]">
+          </div>
+          <div className="absolute top-[24vw] z-10 w-[80vw] md:w-[45vw] lg:w-[40vw] xl:w-[45vw] xl:h-[8vw] rounded-lg left-[5vw]">
+            </div>
+          </div>
+
+
       <div className="justify-center sm:pr-4 sm:pl-4 md:pl-40 md:pr-40">
         <div>
           <ScrollBox
