@@ -9,6 +9,11 @@ import ScrollRevealComponent from "./components/scrollAppear";
 import Roundel from "./components/roundel";
 {
   /*TODO:: 
+  {false &&<ScrollBox bgColor="bg-emerald-500"
+            width={10}
+            height={20}> Text goes here!</ScrollBox>}
+      {false && <ScrollRevealComponent></ScrollRevealComponent>}
+      {false &&<ColorFadeComponent></ColorFadeComponent>}
    *  AI-ML uses in art and creative visuals.
    *  AI-ML uses in data visualization.
    *  AI-ML uses in historical topics.
@@ -98,11 +103,7 @@ export default function Home() {
             </div>
           </div>
       <div className="justify-center sm:pr-4 sm:pl-4 md:pl-40 md:pr-40">
-{false &&<ScrollBox bgColor="bg-emerald-500"
-            width={10}
-            height={20}> Text goes here!</ScrollBox>}
-      {false && <ScrollRevealComponent></ScrollRevealComponent>}
-      {false &&<ColorFadeComponent></ColorFadeComponent>}
+
 
 
         <div>
