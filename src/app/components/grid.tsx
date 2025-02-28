@@ -26,7 +26,7 @@ const Grid: React.FC<GridProps> = ({ color, rows }) => {
       }
     };
 
-    updateRanges(); // Run on mount
+    updateRanges();
     window.addEventListener("resize", updateRanges);
 
     return () => window.removeEventListener("resize", updateRanges);
@@ -34,15 +34,27 @@ const Grid: React.FC<GridProps> = ({ color, rows }) => {
 
   // Is this the best way to do this? ^
 
+  const startTime = performance.now()
   const columns = rangeHigh - rangeLow + 1;
 
   return (
     <div className={`grid grid-cols-${columns} gap-y-[1vw] gap-x-[1vw]`}>
-      {Array.from({ length: rows * columns }).map((_, index) => (
-        <GridBox key={index} color={`bg-${color}-${((index % columns) + rangeLow - 1) * 100}`} size="w-[18vw] h-[18vw] sm:w-[17vw] sm:h-[17vw] md:w-[16vw] md:h-[16vw] lg:w-[12vw] lg:h-[12vw] xl:w-[9vw] xl:h-[9vw]" />
-      ))}
+      {Array.from({ length: rows * columns }).map((_, index) => {
+        const lightnessFactor = ((index % columns) + rangeLow - 1) * 100;
+        const opacityWait = lightnessFactor; // Lighter boxes appear sooner
+        return (
+          <GridBox
+            key={index}
+            color={`bg-${color}-${lightnessFactor}`}
+            size="w-[18vw] h-[18vw] sm:w-[17vw] sm:h-[17vw] md:w-[16vw] md:h-[16vw] lg:w-[12vw] 
+                  lg:h-[12vw] xl:w-[9vw] xl:h-[9vw]"
+            opacityWait={opacityWait}
+            startTime = {startTime}
+          />
+        );
+      })}
     </div>
-  );
+  );  
 };
 
 export default Grid;

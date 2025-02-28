@@ -5,31 +5,25 @@ import React, { useEffect, useState } from "react";
 interface GridBoxProperties {
   color: string;
   size: string;
+  opacityWait: number;
+  startTime: number;
 }
-const GridBox: React.FC<GridBoxProperties> = ({ color, size }) => {
+const GridBox: React.FC<GridBoxProperties> = ({ color, size, opacityWait, startTime}) => {
   const [isVisible, setIsVisible] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      const triggerPosition = 50;
+    useEffect(() => {
+      const now = performance.now();
+      const delay = Math.max(50, opacityWait - (now - startTime));
 
-      if (scrollPosition > triggerPosition) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+    const timeout = setTimeout(() => setIsVisible(true), delay);
+    return () => clearTimeout(timeout);
+    },[]);
 
   return (
     <div
-      className={`${color} ${size} col-span-1 row-span-1 rounded-lg  opacity-80 ${isVisible ? "opacity-100" : "opacity-90"}`}
+      className={`${color} ${size} ${isVisible ? "opacity-100" : "opacity-0"
+      } ease-in-out transition-opacity duration-300 
+     col-span-1 row-span-1 rounded-lg`}
     ></div>
   );
 };

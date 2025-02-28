@@ -21,7 +21,7 @@ const ScrollBox: React.FC<ScrollBoxProperties> = ({
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      const triggerPosition = 50;
+      const triggerPosition = 500;
 
       if (scrollPosition > triggerPosition) {
         setIsVisible(true);

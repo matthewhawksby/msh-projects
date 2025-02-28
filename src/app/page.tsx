@@ -4,6 +4,8 @@ import Menu from "./components/menu";
 import Grid from "./components/grid";
 import ScrollBox from "./components/scrollbox";
 import FloatingTextbox from "./components/textbox";
+import ColorFadeComponent from "./components/fadein";
+import ScrollRevealComponent from "./components/scrollAppear";
 import Roundel from "./components/roundel";
 {
   /*TODO:: 
@@ -96,6 +98,13 @@ export default function Home() {
             </div>
           </div>
       <div className="justify-center sm:pr-4 sm:pl-4 md:pl-40 md:pr-40">
+{false &&<ScrollBox bgColor="bg-emerald-500"
+            width={10}
+            height={20}> Text goes here!</ScrollBox>}
+      {false && <ScrollRevealComponent></ScrollRevealComponent>}
+      {false &&<ColorFadeComponent></ColorFadeComponent>}
+
+
         <div>
           <ScrollBox
             bgColor="bg-emerald-500"
