@@ -27,7 +27,7 @@ export default function ScrollRevealComponent() {
           visible ? "opacity-100 scale-100" : "opacity-0 scale-75"
         } bg-pink-500 text-white`}
       >
-        I'm visible after scrolling 300px!
+        text here
       </div>
     </div>
   );
