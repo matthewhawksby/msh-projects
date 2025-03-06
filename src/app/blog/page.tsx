@@ -59,7 +59,7 @@ export default function Home() {
               <p className="font-body xl:h-[7vw] top-1/2 text-lg xl:text-3xl leading-tight m-4">
                 This will be the page for the blog.
                 <br></br>
-                But it hasn't been set up yet!
+                But it hasn&apos;t been set up yet!
               </p>
             </FloatingTextbox>
           </div>
