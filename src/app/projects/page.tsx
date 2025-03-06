@@ -27,7 +27,7 @@ export default function Home() {
           <div className= "absolute z-10 w-[80vw] h-[20vw] md:w-[45vw] lg:w-[40vw] xl:w-[45vw] xl:h-[15vw] p-7 m-10">
           <FloatingTextbox>
             <p className="font-body xl:h-[7vw] top-1/2 text-lg xl:text-2xl leading-tight m-4">
-              Heres my projects page! 
+              Here&apos;s my projects page! 
               <br></br>
               Unfortunately it&apos;s not linked up right now. I&apos;m working on some projects in my classes at the moment, and I hope to add pages for them at the end of the semester.
             </p>
