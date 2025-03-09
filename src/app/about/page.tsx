@@ -5,38 +5,7 @@ import Grid from "../components/grid";
 import ScrollBox from "../components/scrollbox";
 import FloatingTextbox from "../components/textbox";
 import Roundel from "../components/roundel";
-{
-  /*TODO:: 
-   *  AI-ML uses in art and creative visuals.
-   *  AI-ML uses in data visualization.
-   *  AI-ML uses in historical topics.
-   *  AI-ML uses in a small browser game (chess engine?).
-   *  AI-ML uses with a chatbot.
-   *  Projects by topic (create tags to immediately identify)
-      Try using very subtle gradients in text boxes.
-      Separate Elements for name and description
-      Build dropdown menu component
-      Segment Anything to create a css bottom element based on the skyline.
-      breaks?
-      Switch off of vercel to a regular hosted website eventually.
-      Underline Slide motion (kjt)
-      PostgreSQL setup.
-      Curves as separators.
-      Logo Still doesn't look completely right.
-      I used padding for a lot of stuff where it's probably not the best solution.
-      Break everything apart into separate reusable components.
-      Make the Menu work correctly.
-      Add in the header elements with hover and current page underlined.
-      All of this should display differently in dark mode.
-      Make the Menu inline.
-      Add accordion Menus to the about page.
-      Pictures.
-      Make sure it works on rotations too.
-      Emphasis on Applications.
-      Projects page: Give it a second nav bar with a list of projects.
-      Blog: Needs full functionality for code display etc.
-      */
-}
+
 
 export default function Home() {
   return (
