@@ -17,7 +17,7 @@ function Menu() {
         </li>
         <li className="inline-flex">
           <Link
-            href="./projects"
+            href="/projects"
             className="block py-2 px-3 font-semibold hover:underline underline-offset-4 decoration-gray-900 decoration-2 delay-250"
           >
             Projects
@@ -25,7 +25,7 @@ function Menu() {
         </li>
         <li>
           <Link
-            href="./blog"
+            href="/blog"
             className="block py-2 px-3 font-semibold hover:underline underline-offset-4 decoration-gray-900 decoration-2 delay-250"
           >
             Blog
@@ -33,7 +33,7 @@ function Menu() {
         </li>
         <li>
           <Link
-            href="./about"
+            href="/about"
             className="block py-2 px-3 font-semibold hover:underline underline-offset-4 decoration-gray-900 decoration-2 delay-250"
           >
             About
@@ -41,7 +41,7 @@ function Menu() {
         </li>
         <li>
           <Link
-            href="./links"
+            href="/links"
             className="block py-2 px-3 font-semibold hover:underline underline-offset-4 decoration-gray-900 decoration-2 delay-250"
           >
             Links
