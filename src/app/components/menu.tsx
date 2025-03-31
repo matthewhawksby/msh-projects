@@ -9,7 +9,7 @@ function Menu() {
       <ul className="inline-flex text-2xl text-gray-900">
         <li className="inline-flex">
           <Link
-            href="./"
+            href="/"
             className="block py-2 px-3 font-semibold hover:underline underline-offset-4 decoration-gray-900 decoration-2 delay-250"
           >
             Main
