@@ -9,7 +9,6 @@ import Logo from "../../../components/logo";
 import Menu from "../../../components/menu";
 import ScrollBox from "../../../components/scrollbox";
 
-// Dynamically import the chart so it's only rendered on the client
 const StressChart = dynamic(() => import("../../../components/StressChart"), {
   ssr: false,
 });
@@ -22,6 +21,11 @@ type GraphPoint = {
 export default function Home() {
   const [graphData, setGraphData] = useState<GraphPoint[]>([]);
   const [volumeData, setVolumeData] = useState<GraphPoint[]>([]);
+
+  const resetData = () => {
+  setGraphData([]);
+  setVolumeData([]);
+};
 
   const onBlobReady = async (blob: Blob) => {
     const formData = new FormData();
@@ -96,7 +100,7 @@ export default function Home() {
                 <div className="mt-10">
                   <StressChart data={graphData} label="Stress" color="#ffd700" />
                   <StressChart data={volumeData} label="Volume" color="#3b82f6" />
-          <h2 className="text-center font-semibold text-lg mb-2">🎚️ Volume (Loudness)</h2>
+          <h2 className="text-center font-semibold text-lg mb-2"> Volume (Loudness)</h2>
 
         </div>
       </div>
@@ -124,6 +128,14 @@ export default function Home() {
           >
             Download CSV
           </button>
+
+          <button
+            className="bg-yellow-500 text-white px-4 py-2 rounded-xl"
+            onClick={resetData}
+          >
+            Reset
+          </button>
+
                 {isRecording && (
                 <div className="text-center text-red-600 font-bold mb-4 animate-pulse">
                   🎙️ Listening... Sending audio every second.

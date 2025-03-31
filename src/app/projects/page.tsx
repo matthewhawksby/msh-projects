@@ -27,7 +27,7 @@ export default function Home() {
             <p className="font-body xl:h-[7vw] top-1/2 text-lg xl:text-2xl leading-tight m-4">
               Here&apos;s my projects page! 
               <br></br>
-              Unfortunately it&apos;s not linked up right now. I&apos;m working on some projects in my classes at the moment, and I hope to add pages for them at the end of the semester.
+               I&apos;m working on some projects in my classes at the moment, and I hope to add pages for them at the end of the semester.
             </p>
           </FloatingTextbox>
           </div>
