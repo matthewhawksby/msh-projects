@@ -3,14 +3,14 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-const ProjectBox = ({ image, title, description }: { image: string; title: string; description: string;}) => {
+const ProjectBox = ({ image, title, description, link }: { image: string; title: string; description: string; link: string;}) => {
   return (
     <motion.div
       className="relative w-[90%] max-w-lg rounded-3xl overflow-hidden shadow-xl bg-white border border-gray-300 hover:shadow-2xl transition-transform duration-300"
       whileHover={{ scale: 1.04 }}
     >
       <div className="p-3">
-        <Link href="./projects/projpages/stitch">
+        <Link href= {link}>
         <div className="border-2 border-black rounded-3xl overflow-hidden">
           <img src={image} alt={title}  className="w-full h-[250px] object-cover rounded-2xl" />
         </div>

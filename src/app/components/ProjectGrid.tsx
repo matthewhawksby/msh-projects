@@ -2,10 +2,10 @@
 import ProjectBox from "./projectBox";
 
 const projects = [
-  { image: "/project1.jpg", title: "SpeakEasy", description: "An application + speech model fine-tuned on public speaking data for real-time confidence estimation." },
-  { image: "/project2.jpg", title: "Panorama Generator", description: "Creates a panorama by stitching multiple images using FAST/Harris Corner Detection." },
-  { image: "/project3.jpg", title: "Neural Network Verifier", description: "Guarantees robustness of a network to input perturbations." },
-  { image: "/complex.jpg", title: "Complex Root Visualizer", description: "An application to visualize the number of iterations needed to find a complex root using Newton's method." },
+  { image: "/speaking.png", title: "SpeakEasy", description: "An application + speech model fine-tuned on public speaking data for real-time confidence estimation.", link: "./projects/projpages/speakEasy" },
+  { image: "/fast.png", title: "Panorama Generator", description: "Creates a panorama by stitching multiple images using FAST/Harris Corner Detection.", link: "./projects/projpages/stitch"  },
+  { image: "/verifierImage.png", title: "Neural Network Verifier for MNIST", description: "Guarantees robustness of a network to input perturbations.", link: "./projects/projpages/verifier"  },
+  { image: "/complex.jpg", title: "Complex Root Visualizer", description: "An application to visualize the number of iterations needed to find a complex root using Newton's method.", link: "./projects/projpages/complex"  },
 ];
 
 export default function ProjectGrid() {
