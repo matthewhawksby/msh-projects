@@ -32,7 +32,7 @@ export default function Home() {
     formData.append("audio", blob, "chunk.webm");
 
     try {
-      const res = await fetch("http://YOUR_API/predict", {
+      const res = await fetch("http://35.182.55.68:5000/predict", {
         method: "POST",
         body: formData,
       });
@@ -105,45 +105,45 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="p-4 mt-6">
-        <div className="flex justify-center gap-4 mb-4">
-          <button
-            className="bg-green-600 text-white px-4 py-2 rounded-xl"
-            onClick={start}
-            disabled={isRecording}
-          >
-            Start
-          </button>
-          <button
-            className="bg-red-600 text-white px-4 py-2 rounded-xl"
-            onClick={stop}
-            disabled={!isRecording}
-          >
-            Stop
-          </button>
+      <div className="flex flex-col items-center gap-4 mb-4 p-4 m-4">
+  {/* Buttons */}
+  <div className="flex gap-4">
+    <button
+      className="bg-green-600 text-white px-4 py-2 rounded-xl"
+      onClick={start}
+      disabled={isRecording}
+    >
+      Start
+    </button>
+    <button
+      className="bg-red-600 text-white px-4 py-2 rounded-xl"
+      onClick={stop}
+      disabled={!isRecording}
+    >
+      Stop
+    </button>
+    <button
+      className="bg-blue-600 text-white px-4 py-2 rounded-xl"
+      onClick={() => downloadCSV(volumeData, "volume.csv")}
+    >
+      Download CSV
+    </button>
+    <button
+      className="bg-yellow-500 text-white px-4 py-2 rounded-xl"
+      onClick={resetData}
+    >
+      Reset
+    </button>
+  </div>
 
-          <button
-            className="bg-blue-600 text-white px-4 py-2 rounded-xl"
-            onClick={() => downloadCSV(volumeData, "volume.csv")}
-          >
-            Download CSV
-          </button>
+  {/* Status Message */}
+  {isRecording && (
+    <div className="text-center text-red-600 font-bold animate-pulse">
+      🎙️ Listening... Sending audio every second.
+    </div>
+  )}
+</div>
 
-          <button
-            className="bg-yellow-500 text-white px-4 py-2 rounded-xl"
-            onClick={resetData}
-          >
-            Reset
-          </button>
-
-                {isRecording && (
-                <div className="text-center text-red-600 font-bold mb-4 animate-pulse">
-                  🎙️ Listening... Sending audio every second.
-                </div>
-                )}
-        </div>
-
-      </div>
 
 
       {/* Scroll Box + Footer Info */}

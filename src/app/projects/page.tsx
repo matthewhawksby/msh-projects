@@ -34,7 +34,7 @@ export default function Home() {
           <Grid color="red" rows={2}></Grid>
       </div>
 
-      <div className="relative bg-red-100 h-[40vw] rounded-lg opacity-80 font-body sm:pr-4 sm:pl-4 md:pl-12 md:pr-12 mr-10 ml-10">
+      <div className="relative bg-red-100 h-[35vw] rounded-lg opacity-80 font-body sm:pr-4 sm:pl-4 md:pl-12 md:pr-12 mr-10 ml-10">
           <div className="absolute top-[2vw] z-10 w-[80vw] md:w-[45vw] lg:w-[70vw] xl:w-[90vw] xl:h-[8vw] rounded-lg left-[2vw]">
             <ProjectGrid></ProjectGrid>
           </div>
