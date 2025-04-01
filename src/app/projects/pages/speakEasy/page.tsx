@@ -71,7 +71,7 @@ const onVolumeUpdate = (volume: number) => {
 
 
 // Initialize WebSocket
-const { send } = useWebSocketClient("ws://<your-ec2-ip>:8000/ws", handleWebSocketMessage);
+const { send } = useWebSocketClient("ws://35.182.55.68:8000/ws", handleWebSocketMessage);
 
 // Start recording and streaming audio via WebSocket
 const { start, stop, isRecording } = useMicrophoneRecorder(() => {}, send, onVolumeUpdate);
