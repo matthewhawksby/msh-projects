@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
-
+import useWebSocketClient from "../../../components/useWebSocketClient";
 import useMicrophoneRecorder from "../../../components/useMicrophoneRecorder";
 import Dropdown from "../../../components/dropdown";
 import Logo from "../../../components/logo";
@@ -22,46 +22,24 @@ export default function Home() {
   const [graphData, setGraphData] = useState<GraphPoint[]>([]);
   const [volumeData, setVolumeData] = useState<GraphPoint[]>([]);
 
-  const resetData = () => {
+  const handleWebSocketMessage = (message: string) => {
+    const match = message.match(/Predicted Stress Level: ([0-9.]+)/);
+    if (match) {
+      const value = parseFloat(match[1]);
+      setGraphData((prev) => [
+        ...prev.slice(-2999),
+        { time: new Date().toLocaleTimeString(), confidence: value },
+      ]);
+    }
+  };
+// Reset button
+const resetData = () => {
   setGraphData([]);
   setVolumeData([]);
 };
 
-  const onBlobReady = async (blob: Blob) => {
-    const formData = new FormData();
-    formData.append("audio", blob, "chunk.webm");
-
-    try {
-      const res = await fetch("http://35.182.55.68:5000/predict", {
-        method: "POST",
-        body: formData,
-      });
-      const json = await res.json();
-      setGraphData((prev) => [
-        ...prev.slice(-999),
-        {
-          time: new Date().toLocaleTimeString(),
-          confidence: Number(json.result),
-        },
-      ]);
-    } catch (e) {
-      console.error("API error:", e);
-    }
-  };
-    const onVolumeUpdate = (volume: number) => {
-    setVolumeData((prev) => [
-      ...prev.slice(-999), // keep last 20 values
-      {
-        time: new Date().toLocaleTimeString(),
-        confidence: volume,
-      },
-    ]);
-  };
-
-
-  const { start, stop, isRecording } = useMicrophoneRecorder(onBlobReady, onVolumeUpdate);
-
-  function downloadCSV(data: GraphPoint[], filename = "volume.csv") {
+// CSV download
+function downloadCSV(data: GraphPoint[], filename = "volume.csv") {
   const csv = [
     ["time", "confidence"],
     ...data.map((point) => [point.time, point.confidence]),
@@ -79,6 +57,25 @@ export default function Home() {
 
   URL.revokeObjectURL(url);
 }
+
+// Volume graph data
+const onVolumeUpdate = (volume: number) => {
+  setVolumeData((prev) => [
+    ...prev.slice(-999),
+    {
+      time: new Date().toLocaleTimeString(),
+      confidence: volume,
+    },
+  ]);
+};
+
+
+// Initialize WebSocket
+const { send } = useWebSocketClient("ws://<your-ec2-ip>:8000/ws", handleWebSocketMessage);
+
+// Start recording and streaming audio via WebSocket
+const { start, stop, isRecording } = useMicrophoneRecorder(() => {}, send, onVolumeUpdate);
+
 
   return (
     <main className="w-screen bg-gray-100">

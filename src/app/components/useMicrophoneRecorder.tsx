@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 
 export default function useMicrophoneRecorder(
   onBlobReady: (blob: Blob) => void,
+  sendFn: (blob: Blob) => void,
   onVolumeUpdate: (volume: number) => void
 ) {
   const mediaRecorderRef = useRef<MediaRecorder | null>(null);
@@ -19,7 +20,7 @@ export default function useMicrophoneRecorder(
     const recorder = new MediaRecorder(stream);
     mediaRecorderRef.current = recorder;
 
-    // 🔊 --- Web Audio setup for volume measurement ---
+    // 🎚️ Volume detection
     const audioContext = new AudioContext();
     const source = audioContext.createMediaStreamSource(stream);
     const analyser = audioContext.createAnalyser();
@@ -29,28 +30,27 @@ export default function useMicrophoneRecorder(
 
     volumeIntervalRef.current = setInterval(() => {
       analyser.getByteTimeDomainData(dataArray);
-
       let sumSquares = 0;
       for (let i = 0; i < dataArray.length; i++) {
         const val = (dataArray[i] - 128) / 128;
         sumSquares += val * val;
       }
-
       const rms = Math.sqrt(sumSquares / dataArray.length);
-      const gain = 4; // Adjust between 2–5 depending on your preference
-      onVolumeUpdate(Math.min(rms * gain, 1)); // Clamp to a max of 1
+      const gain = 4;
+      onVolumeUpdate(Math.min(rms * gain, 1));
     }, 100);
 
-    // 🎙️ --- Audio recorder setup for inference chunks ---
+    // 🎙️ Audio capture
     recorder.ondataavailable = (e: BlobEvent) => {
       audioBufferRef.current.push(e.data);
     };
 
     recorder.onstop = () => {
-      const chunks = audioBufferRef.current.slice(-4); // Last 4 seconds
+      const chunks = audioBufferRef.current.slice(-4);
       const blob = new Blob(chunks, { type: "audio/webm" });
       audioBufferRef.current = [];
-      onBlobReady(blob); // Send blob to backend
+      onBlobReady(blob); // optional local use
+      sendFn(blob);      // send to WebSocket
     };
 
     recorder.start(1000);
@@ -75,3 +75,4 @@ export default function useMicrophoneRecorder(
 
   return { start, stop, isRecording };
 }
+
