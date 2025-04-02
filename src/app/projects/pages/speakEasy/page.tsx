@@ -23,6 +23,7 @@ export default function Home() {
   const [volumeData, setVolumeData] = useState<GraphPoint[]>([]);
 
   const handleWebSocketMessage = (message: string) => {
+    console.log(message);
     const match = message.match(/Predicted Stress Level: ([0-9.]+)/);
     if (match) {
       const value = parseFloat(match[1]);
@@ -32,6 +33,8 @@ export default function Home() {
       ]);
     }
   };
+  
+  
 // Reset button
 const resetData = () => {
   setGraphData([]);
@@ -71,7 +74,7 @@ const onVolumeUpdate = (volume: number) => {
 
 
 // Initialize WebSocket
-const { send } = useWebSocketClient("wss://35.182.55.68:8000/ws", handleWebSocketMessage);
+const { send } = useWebSocketClient("wss://api.hawksby.dev/ws", handleWebSocketMessage);
 
 // Start recording and streaming audio via WebSocket
 const { start, stop, isRecording } = useMicrophoneRecorder(() => {}, send, onVolumeUpdate);
@@ -89,20 +92,21 @@ const { start, stop, isRecording } = useMicrophoneRecorder(() => {}, send, onVol
           <Menu />
         </div>
       </nav>
-
-      <div className="relative bg-red-100 h-[40vw] rounded-lg opacity-80 font-body sm:pr-4 sm:pl-4 md:pl-12 md:pr-12 mr-10 ml-10">
+<div className="flex-1 flex flex-col justify-between px-4 py-6">
+      <div className="relative bg-red-100 max-h-[75vh] rounded-lg opacity-80 font-body sm:pr-4 sm:pl-4 md:pl-12 md:pr-12 mr-10 ml-10">
         <div className="absolute top-[2vw] z-10 w-[80vw] md:w-[45vw] lg:w-[40vw] xnpm run del:w-[45vw] xl:h-[8vw] rounded-lg left-[5vw]" />
         <div className="absolute top-[12vw] z-10 w-[80vw] md:w-[45vw] lg:w-[40vw] xl:w-[45vw] xl:h-[15vw] right-[5vw]" />
         <div className="absolute top-[24vw] z-10 w-[80vw] md:w-[45vw] lg:w-[40vw] xl:w-[45vw] xl:h-[8vw] rounded-lg left-[5vw]" />
-                <div className="mt-10">
+                <div className="">
                   <StressChart data={graphData} label="Stress" color="#ffd700" />
                   <StressChart data={volumeData} label="Volume" color="#3b82f6" />
-          <h2 className="text-center font-semibold text-lg mb-2"> Volume (Loudness)</h2>
+          <h2 className="text-center font-semibold text-lg"> Volume (Loudness)</h2>
 
         </div>
       </div>
+      </div>
 
-      <div className="flex flex-col items-center gap-4 mb-4 p-4 m-4">
+      <div className="flex flex-col items-center gap-0 mb-4 pl-4 pr-4 ml-4 mr-4">
   {/* Buttons */}
   <div className="flex gap-4">
     <button
