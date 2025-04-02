@@ -21,8 +21,9 @@ type GraphPoint = {
 export default function Home() {
   const [graphData, setGraphData] = useState<GraphPoint[]>([]);
   const [volumeData, setVolumeData] = useState<GraphPoint[]>([]);
-  
+
   const handleWebSocketMessage = (message: string) => {
+    console.log(message);
     const match = message.match(/Predicted Stress Level: ([0-9.]+)/);
     if (match) {
       const value = parseFloat(match[1]);
