@@ -62,7 +62,7 @@ export default function useMicrophoneRecorder(
         recorder.stop();
         recorder.start(1000);
       }
-    }, 1000);
+    }, 1200);
   };
 
   const stop = () => {
