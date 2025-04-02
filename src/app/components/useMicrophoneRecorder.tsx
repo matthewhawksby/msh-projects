@@ -47,8 +47,7 @@ export default function useMicrophoneRecorder(
 
     recorder.onstop = () => {
       const chunks = audioBufferRef.current.slice(-4);
-      const blob = new Blob(chunks, { type: "audio/wav" });
-      console.log("Blob type being sent:", blob.type);
+      const blob = new Blob(chunks, { type: "audio/webm" });
       audioBufferRef.current = [];
       onBlobReady(blob); // optional local use
       sendFn(blob);      // send to WebSocket
