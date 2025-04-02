@@ -23,15 +23,21 @@ export default function Home() {
   const [volumeData, setVolumeData] = useState<GraphPoint[]>([]);
 
   const handleWebSocketMessage = (message: string) => {
-    const match = message.match(/Predicted Stress Level: ([0-9.]+)/);
-    if (match) {
-      const value = parseFloat(match[1]);
-      setGraphData((prev) => [
-        ...prev.slice(-2999),
-        { time: new Date().toLocaleTimeString(), confidence: value },
-      ]);
+    try {
+      const data = JSON.parse(message);
+      const value = Number(data.predicted_stress);
+  
+      if (!isNaN(value)) {
+        setGraphData((prev) => [
+          ...prev.slice(-2999),
+          { time: new Date().toLocaleTimeString(), confidence: value },
+        ]);
+      }
+    } catch (err) {
+      console.error("WebSocket JSON parse error:", err);
     }
   };
+  
 // Reset button
 const resetData = () => {
   setGraphData([]);
