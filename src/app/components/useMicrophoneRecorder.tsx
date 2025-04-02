@@ -17,14 +17,7 @@ export default function useMicrophoneRecorder(
 
   const start = async () => {
     const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-    if (!MediaRecorder.isTypeSupported("audio/wav")) {
-      console.warn("audio/wav not supported, falling back to audio/webm");
-    }
-
-    const recorder = new MediaRecorder(stream, {
-      mimeType: "audio/wav"  
-    });
-    
+    const recorder = new MediaRecorder(stream);
     mediaRecorderRef.current = recorder;
 
     // 🎚️ Volume detection
