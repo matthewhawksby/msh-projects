@@ -137,7 +137,6 @@ const { start, stop, isRecording } = useMicrophoneRecorder(() => {}, send, onVol
     </button>
   </div>
 
-  {/* Status Message */}
   {isRecording && (
     <div className="text-center text-red-600 font-bold animate-pulse">
       🎙️ Listening... Sending audio every second.
@@ -145,9 +144,6 @@ const { start, stop, isRecording } = useMicrophoneRecorder(() => {}, send, onVol
   )}
 </div>
 
-
-
-      {/* Scroll Box + Footer Info */}
       <div className="justify-center sm:pr-4 sm:pl-4 md:pl-40 md:pr-40">
         <div>
           <ScrollBox bgColor="bg-red-500" width={10} height={20}>
@@ -158,7 +154,6 @@ const { start, stop, isRecording } = useMicrophoneRecorder(() => {}, send, onVol
         </div>
       </div>
 
-      {/* Bottom Nav */}
       <nav className="flex md:pr-32 md:pl-32 h-10 w-screen bg-neutral-200 items-center justify-between border-gray-900/50 bg-white border-t-2 sticky bottom-0 z-50" />
     </main>
   );
