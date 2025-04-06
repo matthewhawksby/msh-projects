@@ -60,7 +60,9 @@ export default function useMicrophoneRecorder(
       if (recorder.state === "recording") {
         recorder.requestData();
         recorder.stop();
-        recorder.start(300);
+        setTimeout(() => {
+          recorder.start(300);
+        }, 50);
       }
     }, 300);
   };
