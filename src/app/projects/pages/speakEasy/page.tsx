@@ -8,6 +8,7 @@ import Dropdown from "../../../components/dropdown";
 import Logo from "../../../components/logo";
 import Menu from "../../../components/menu";
 import ScrollBox from "../../../components/scrollbox";
+import MultipleCharactersAnimation from '../../../components/multiple-characters.tsx';
 
 const StressChart = dynamic(() => import("../../../components/StressChart"), {
   ssr: false,
