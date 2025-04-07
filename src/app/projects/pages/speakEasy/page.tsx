@@ -78,7 +78,7 @@ const { send } = useWebSocketClient("wss://api.hawksby.dev/ws", handleWebSocketM
 
 // Start recording and streaming audio via WebSocket
 const { start, stop, isRecording } = useMicrophoneRecorder(() => {}, send, onVolumeUpdate);
-//                  <StressChart data={volumeData} label="Volume" color="#3b82f6" />
+//                  
 
   return (
     <main className="w-screen bg-gray-100">
@@ -99,7 +99,7 @@ const { start, stop, isRecording } = useMicrophoneRecorder(() => {}, send, onVol
         <div className="absolute top-[24vw] z-10 w-[80vw] md:w-[45vw] lg:w-[40vw] xl:w-[45vw] xl:h-[8vw] rounded-lg left-[5vw]" />
                 <div className="">
                   <StressChart data={graphData} label="Stress" color="#ffd700" />
-
+                  <StressChart data={volumeData} label="Volume" color="#3b82f6" />
           <h2 className="text-center font-semibold text-lg"> Volume (Loudness)</h2>
 
         </div>
