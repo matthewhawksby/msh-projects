@@ -24,7 +24,7 @@ export default function useMicrophoneRecorder(
     const audioContext = new AudioContext();
     const source = audioContext.createMediaStreamSource(stream);
     const analyser = audioContext.createAnalyser();
-    analyser.fftSize = 2048;
+    analyser.fftSize = 1024;
     source.connect(analyser);
     const dataArray = new Uint8Array(analyser.fftSize);
 
@@ -38,18 +38,23 @@ export default function useMicrophoneRecorder(
       const rms = Math.sqrt(sumSquares / dataArray.length);
       const gain = 4;
       onVolumeUpdate(Math.min(rms * gain, 1));
-    }, 100);
+    }, 200);
 
     // 🎙️ Audio capture
     recorder.ondataavailable = (e: BlobEvent) => {
       audioBufferRef.current.push(e.data);
+      if (audioBufferRef.current.length > 4) {
+        audioBufferRef.current.shift(); 
+      }
     };
 
     recorder.onstop = () => {
       const chunks = audioBufferRef.current.slice(-4);
       const blob = new Blob(chunks, { type: "audio/webm" });
       audioBufferRef.current = [];
+      
       onBlobReady(blob); // optional local use
+      console.log("⏱️ Send:", performance.now()); // Log send time
       sendFn(blob);      // send to WebSocket
     };
 
