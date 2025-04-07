@@ -53,16 +53,16 @@ export default function useMicrophoneRecorder(
       sendFn(blob);      // send to WebSocket
     };
 
-    recorder.start(1200);
+    recorder.start(1100);
     setIsRecording(true);
 
     intervalRef.current = setInterval(() => {
       if (recorder.state === "recording") {
         recorder.requestData();
         recorder.stop();
-        recorder.start(1200);
+        recorder.start(1100);
       }
-    }, 1200);
+    }, 1100);
   };
 
   const stop = () => {
