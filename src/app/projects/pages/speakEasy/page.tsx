@@ -12,10 +12,11 @@ import ScrollBox from "../../../components/scrollbox";
 const StressChart = dynamic(() => import("../../../components/StressChart"), {
   ssr: false,
 });
+//
 
 type GraphPoint = {
   time: string;
-  confidence: number;
+  stress: number;
 };
 
 export default function Home() {
@@ -29,7 +30,7 @@ export default function Home() {
       const value = parseFloat(match[1]);
       setGraphData((prev) => [
         ...prev.slice(-2999),
-        { time: new Date().toLocaleTimeString(), confidence: value },
+        { time: new Date().toLocaleTimeString(), stress: value },
       ]);
     }
   };
@@ -44,8 +45,8 @@ const resetData = () => {
 // CSV download
 function downloadCSV(data: GraphPoint[], filename = "volume.csv") {
   const csv = [
-    ["time", "confidence"],
-    ...data.map((point) => [point.time, point.confidence]),
+    ["time", "stress"],
+    ...data.map((point) => [point.time, point.stress]),
   ]
     .map((row) => row.join(","))
     .join("\n");
@@ -67,7 +68,7 @@ const onVolumeUpdate = (volume: number) => {
     ...prev.slice(-999),
     {
       time: new Date().toLocaleTimeString(),
-      confidence: volume,
+      stress: volume,
     },
   ]);
 };

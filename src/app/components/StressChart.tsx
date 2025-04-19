@@ -3,7 +3,7 @@ import { LineChart } from '@mui/x-charts';
 
 type GraphPoint = {
   time: string;
-  confidence: number;
+  stress: number;
 };
 
 type Props = {
@@ -17,7 +17,7 @@ export default function StressChart({ data, label = "Stress", color = "#ef4444" 
     <LineChart
       height={300}
       series={[{
-        data: data.map(p => p.confidence),
+        data: data.map(p => p.stress),
         label,
         color,
         showMark:false
